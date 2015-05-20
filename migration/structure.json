@@ -1,0 +1,390 @@
+{
+    "0001": {
+        "prefix": "mig",
+        "table": "fly_migration",
+        "alias": "",
+        "model": "",
+        "description": "Add the fly_migration table \n",
+        "comment": "Holds the latest migration version",
+        "common": false,
+        "fields": [
+            {
+                "sql": "[prefix]_version INT(11) UNSIGNED NOT NULL",
+                "name": "version",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+
+        ],
+        "relationships": [
+
+        ],
+        "data": [
+            "INSERT INTO fly_migration (mig_version) VALUES (1)"
+        ]
+    },
+    "0002": {
+        "prefix": "u",
+        "table": "fly_user",
+        "alias": "",
+        "model": "User",
+        "description": "Add the fly_user table \n",
+        "comment": "",
+        "common": true,
+        "fields": [
+            {
+                "sql": "[prefix]_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT",
+                "name": "id",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_name VARCHAR(255) NOT NULL",
+                "name": "name",
+                "validator": "string",
+                "common": false,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_email VARCHAR(100) NOT NULL",
+                "name": "email",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_password VARCHAR(100) NOT NULL",
+                "name": "password",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_role INT(4) NOT NULL",
+                "name": "role",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_avatar VARCHAR(155) DEFAULT ''",
+                "name": "avatar",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_status INT(2) NOT NULL",
+                "name": "status",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+            "PRIMARY KEY ([prefix]_id)",
+            "KEY [prefix]_email ([prefix]_email)",
+            "KEY [prefix]_password ([prefix]_password)",
+            "KEY [prefix]_status ([prefix]_status)"
+        ],
+        "relationships": [
+
+        ],
+        "data": [
+            "INSERT INTO fly_user (u_name,u_email, u_password, u_role, u_status) VALUES ('Administrator', 'admin@fly.com', '$2a$12$U886kXovgJrknMJ5OVKCEe.eQrLBN3o/cKTX3oGI1NKVprkRov.3u', 1, 1)"
+        ]
+    },
+    "0003": {
+        "prefix": "a",
+        "table": "fly_api",
+        "alias": "",
+        "model": "Api",
+        "description": "Add the fly_api \n",
+        "comment": "",
+        "common": true,
+        "fields": [
+            {
+                "sql": "[prefix]_client_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT",
+                "name": "client_id",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_public_id CHAR(64) DEFAULT ''",
+                "name": "public_id",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_private_key CHAR(64) NOT NULL",
+                "name": "private_key",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_status ENUM('ACTIVE', 'INACTIVE') NOT NULL",
+                "name": "status",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+            "PRIMARY KEY ([prefix]_client_id)",
+            "KEY [prefix]_public_id ([prefix]_public_id)",
+            "KEY [prefix]_private_key ([prefix]_private_key)",
+            "KEY [prefix]_status ([prefix]_status)"
+        ],
+        "relationships": [
+
+        ],
+        "data": [
+            "INSERT INTO fly_api (a_client_id, a_private_key, a_status) VALUES ('1', '593fe6ed77014f9507761028801aa376f141916bd26b1b3f0271b5ec3135b989', 'ACTIVE')"
+        ]
+    },
+    "0004": {
+        "prefix": "md",
+        "table": "fly_mobile_device",
+        "alias": "",
+        "model": "MobileDevice",
+        "description": "Add the fly_mobile_device \n",
+        "comment": "",
+        "common": true,
+        "fields": [
+            {
+                "sql": "u_id INT(11) NOT NULL",
+                "name": "uid",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT",
+                "name": "id",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_deviceid VARCHAR(64) DEFAULT ''",
+                "name": "deviceid",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_pushtrackerid VARCHAR(512) DEFAULT '0'",
+                "name": "pushtrackerid",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_platform SMALLINT(2) DEFAULT '0'",
+                "name": "platform",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_screenwidth MEDIUMINT(5) DEFAULT '0'",
+                "name": "screenwidth",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_screenheight MEDIUMINT(2) DEFAULT '0'",
+                "name": "screenheight",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_name VARCHAR(32) DEFAULT ''",
+                "name": "name",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_brand VARCHAR(32) DEFAULT ''",
+                "name": "brand",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_os VARCHAR(32) DEFAULT ''",
+                "name": "os",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_appversion VARCHAR(10) DEFAULT ''",
+                "name": "appversion",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_ipaddress INT(11) DEFAULT '0'",
+                "name": "ipaddress",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_datelastaccessed INT(10) DEFAULT '0'",
+                "name": "datelastaccessed",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+            "PRIMARY KEY ([prefix]_id)",
+            "KEY u_id (u_id)",
+            "KEY [prefix]_deviceid ([prefix]_deviceid)"
+        ],
+        "relationships": [
+
+        ],
+        "data": [
+
+        ]
+    },
+    "0005": {
+        "prefix": "ms",
+        "table": "fly_mobile_session",
+        "alias": "",
+        "model": "MobileSession",
+        "description": "Add the fly_mobile_session \n",
+        "comment": "",
+        "common": true,
+        "fields": [
+            {
+                "sql": "u_id INT(11) NOT NULL",
+                "name": "uid",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "md_deviceid VARCHAR(64) DEFAULT ''",
+                "name": "deviceid",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT",
+                "name": "id",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_sessionid VARCHAR(32) DEFAULT ''",
+                "name": "sessionid",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_platform SMALLINT(2) DEFAULT '0'",
+                "name": "platform",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_ipaddress INT(11) DEFAULT '0'",
+                "name": "ipaddress",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_lastipaddress INT(11) DEFAULT '0'",
+                "name": "lastipaddress",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_datelastaccessed INT(10) DEFAULT '0'",
+                "name": "datelastaccessed",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+            "PRIMARY KEY ([prefix]_id)",
+            "KEY u_id (u_id)",
+            "KEY md_deviceid (md_deviceid)",
+            "KEY [prefix]_sessionid ([prefix]_sessionid)"
+        ],
+        "relationships": [
+
+        ],
+        "data": [
+
+        ]
+    },
+    "0006": {
+        "prefix": "l",
+        "table": "fly_logs",
+        "alias": "",
+        "model": "Logger",
+        "description": "Add the fly_logs \n",
+        "comment": "",
+        "common": true,
+        "fields": [
+            {
+                "sql": "[prefix]_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT",
+                "name": "id",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_name VARCHAR(32) DEFAULT ''",
+                "name": "name",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_type INT(3) DEFAULT 0",
+                "name": "type",
+                "validator": "int",
+                "common": true,
+                "description": ""
+            },
+            {
+                "sql": "[prefix]_content TEXT",
+                "name": "content",
+                "validator": "string",
+                "common": true,
+                "description": ""
+            }
+        ],
+        "indexes": [
+            "PRIMARY KEY ([prefix]_id)",
+            "KEY [prefix]_name ([prefix]_name)",
+            "KEY [prefix]_type ([prefix]_type)"
+        ],
+        "relationships": [],
+        "data": []
+    }
+}

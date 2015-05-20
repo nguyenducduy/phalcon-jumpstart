@@ -1,4 +1,4 @@
-Phalcon Jumpstart
+Fly with Phalcon
 ================
 
 ## Requirements
@@ -15,6 +15,7 @@ Phalcon Jumpstart
 
 - GD Library (>=2.0)
 - Imagick PHP extension (>=6.5.7)
+- [Link] (http://image.intervention.io/)
 
 ## Supported Crypt Libraries (using for encrypt cookie)
 
@@ -40,6 +41,7 @@ logs/apache/*
 logs/app/*
 logs/mig/*
 public/uploads/*
+public/minify/*
 
 Documentation
 ================
@@ -73,6 +75,10 @@ Documentation
 - Run following command in shell prompt:
     php cli/cli.php migrate indexes
 
+## Knockout Library
+
+- Validation: [Link] (https://github.com/Knockout-Contrib/Knockout-Validation)
+
 ## Running Sphinx Plain-Indexes
 
 - indexes data stored in /usr/local/var/data/
@@ -105,3 +111,14 @@ Documentation
 - CLEAR DATA: TRUNCATE RTINDEX < index-name >
 - CHECK STATUS OF A INDEX: SHOW INDEX < index-name > STATUS;
 
+## Running PHP background task
+
+- (CentOS) nohup /usr/bin/php /data/noteblog/cli/cli.php crawl get_chapter_list manga24h &
+
+## Running Worker manga
+- Start beanstalkd
+- Run worker : php cli/cli.php worker manga
+
+## External plugins
+http://ianlunn.github.io/Hover/
+http://www.html5templatesdreamweaver.com/hover-effects.html
