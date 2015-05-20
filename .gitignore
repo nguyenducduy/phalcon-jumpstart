@@ -1,0 +1,8 @@
+cache/annotations/*
+cache/metadata/*
+cache/volt/*
+logs/apache/*
+logs/app/*
+logs/mig/*
+public/uploads/*
+public/minify/*
