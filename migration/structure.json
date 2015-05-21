@@ -95,7 +95,7 @@
 
         ],
         "data": [
-            "INSERT INTO fly_user (u_name,u_email, u_password, u_role, u_status) VALUES ('Administrator', 'admin@fly.com', '$2a$12$U886kXovgJrknMJ5OVKCEe.eQrLBN3o/cKTX3oGI1NKVprkRov.3u', 1, 1)"
+            "INSERT INTO fly_user (u_name,u_email, u_password, u_role, u_status) VALUES ('Administrator', 'admin@fly.com', '$2a$12$U886kXovgJrknMJ5OVKCEe.eQrLBN3o/cKTX3oGI1NKVprkRov.3u', 5, 1)"
         ]
     },
     "0003": {

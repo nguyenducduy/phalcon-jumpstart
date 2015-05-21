@@ -64,7 +64,7 @@ class Admin
             });
 
             // Authorization
-            // $eventManager->attach('dispatch', new \Fly\Authorization('admin'));
+            $eventManager->attach('dispatch', new \Fly\Authorization('admin'));
 
             $dispatcher->setEventsManager($eventManager);
             $dispatcher->setDefaultNamespace('Controller\Admin');

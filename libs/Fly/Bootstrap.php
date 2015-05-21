@@ -13,7 +13,7 @@
 namespace Fly;
 
 use Phalcon\Mvc\Model\MetaData\Files as PhMetadataFiles;
-use Phalcon\Acl\Adapter\Database as PhAcl;
+use Phalcon\Acl\Adapter\Memory as PhAcl;
 use Phalcon\Annotations\Adapter\Files as PhAnnotationsAdapter;
 use Phalcon\Cache\Backend\File as PhCacheBack;
 use Phalcon\Cache\Frontend\Data as PhCacheFront;
@@ -70,6 +70,7 @@ class Bootstrap
         $loaders = [
             'session',
             'config',
+            'permission',
             'loader',
             'database',
             'logger',
@@ -121,6 +122,21 @@ class Bootstrap
 
         $this->di->setShared('config', function () use ($configFile) {
             return new PhConfig($configFile);
+        });
+    }
+
+    /**
+     * Initializes the ACL Variable
+     *
+     * @param array $options
+     */
+    public function initPermission($options = [])
+    {
+        $permFile  = require(ROOT_PATH . '/conf/permission.php');
+
+        $this->di->setShared('permission', function () use ($permFile) {
+            $perm = new PhConfig($permFile);
+            return $perm->toArray();
         });
     }
 
@@ -574,14 +590,8 @@ class Bootstrap
         $config = $this->di['config'];
 
         $this->di->setShared('acl', function() use ($config) {
-            $acl = new PhAcl([
-                'db' => $this->di['db'],
-                'roles' => $config->aclTables->tbl_roles,
-                'rolesInherits' => $config->aclTables->tbl_rolesInherits,
-                'resources' => $config->aclTables->tbl_resources,
-                'resourcesAccesses' => $config->aclTables->tbl_resourcesAccesses,
-                'accessList' => $config->aclTables->tbl_accessList
-            ]);
+            $acl = new PhAcl();
+            $acl->setDefaultAction(\Phalcon\Acl::DENY);
 
             return $acl;
         });

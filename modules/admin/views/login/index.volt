@@ -14,6 +14,7 @@
     </head>
 
     <body class="signin">
+        {{content()}}
         <form method="post" action="">
             <input type="hidden" name="{{ security.getTokenKey() }}" value="{{ security.getToken() }}"/>
             <section>

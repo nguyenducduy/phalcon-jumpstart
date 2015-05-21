@@ -14,6 +14,7 @@
 namespace Controller\Admin;
 
 use Fly\BaseController as FlyController;
+use Fly\Helper;
 
 class IndexController extends FlyController
 {
