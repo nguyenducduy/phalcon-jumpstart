@@ -39,7 +39,6 @@
                                 <th>Avatar</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Password</th>
                                 <th>
                                     <a href="{{ url.getBaseUri() }}admin/user?orderby=role&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}&page={{ paginator.current }}">
                                         Role
@@ -73,7 +72,6 @@
                                 <td><img class="img-cirle" src="{{ static_url(user.avatar) }}" width="50" height="50" /></td>
                                 <td>{{ user.name }}</td>
                                 <td>{{ user.email }}</td>
-                                <td>{{ user.password }}</td>
                                 <td><code>{{ user.getRoleName() }}</code></td>
                                 <td><span class="label label-{{ user.getStatusLabel() }}">{{ user.getStatusName()|upper }}</span></td>
                                 <td>{{ date('Y/m/d, h:m', user.datecreated) }}</td>

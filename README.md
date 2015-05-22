@@ -7,15 +7,15 @@ Fly with Phalcon
 - PhalconPHP Framwork >=1.3.4
 - PHP >=5.4 (extension: Pdo, mbstring, openssl)
 - Sphinx Search Engine 2.2.+
-- [Link] (http://sphinxsearch.com/)
-- [Link] (http://phalconphp.com/)
+- [Link](http://sphinxsearch.com/)
+- [Link](http://phalconphp.com/)
 - libODBC x64 install CentOS: yum install unixODBC unixODBC-devel postgresql-libs (dependencies of SphinxSE)
 
 ## Supported Image Libraries
 
 - GD Library (>=2.0)
 - Imagick PHP extension (>=6.5.7)
-- [Link] (http://image.intervention.io/)
+- [Link](http://image.intervention.io/)
 
 ## Supported Crypt Libraries (using for encrypt cookie)
 
@@ -75,10 +75,6 @@ Documentation
 - Run following command in shell prompt:
     php cli/cli.php migrate indexes
 
-## Knockout Library
-
-- Validation: [Link] (https://github.com/Knockout-Contrib/Knockout-Validation)
-
 ## Running Sphinx Plain-Indexes
 
 - indexes data stored in /usr/local/var/data/
@@ -98,7 +94,7 @@ Documentation
 
 - Renew RT indexes: remove file *.meta
 - Run daemon: searchd --config conf/sphinx-realtime.conf
-- PHP SphinxQL Builder: [Link] (https://github.com/FoolCode/SphinxQL-Query-Builder)
+- PHP SphinxQL Builder: [Link](https://github.com/FoolCode/SphinxQL-Query-Builder)
 
 ## Sphinx Realtime Index Backup
 
@@ -106,7 +102,7 @@ Documentation
 
 ## SphinxQL connect command line
 
-- [Link] (http://sphinxsearch.com/docs/current.html#sphinxql-flush-ramchunk)
+- [Link](http://sphinxsearch.com/docs/current.html#sphinxql-flush-ramchunk)
 - CONNECT: mysql -h 0 -P 9306 --protocol=tcp --prompt='sphinxQL>'
 - CLEAR DATA: TRUNCATE RTINDEX < index-name >
 - CHECK STATUS OF A INDEX: SHOW INDEX < index-name > STATUS;
@@ -118,7 +114,3 @@ Documentation
 ## Running Worker manga
 - Start beanstalkd
 - Run worker : php cli/cli.php worker manga
-
-## External plugins
-http://ianlunn.github.io/Hover/
-http://www.html5templatesdreamweaver.com/hover-effects.html
