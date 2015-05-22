@@ -4,9 +4,13 @@
  * Defined useful constant
  */
 date_default_timezone_set('Asia/Bangkok');
+ini_set('session.cookie_domain', '.newpj.site');
+
 define('FLAG_DEBUG', true);
 define('ROOT_PATH', realpath('..')); // not have end slash
 define('DS', DIRECTORY_SEPARATOR);
+
+//Detect sub domain for routing
 $sudomaininfo = explode(".",$_SERVER['HTTP_HOST']);
 define('SUBDOMAIN', array_shift($sudomaininfo));
 

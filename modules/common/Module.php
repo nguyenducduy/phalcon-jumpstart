@@ -46,7 +46,7 @@ class Common
             //     }
             // });
 
-            // $eventManager->attach('dispatch', new Authorization('common'));
+            // $eventManager->attach('dispatch', new \Fly\Authorization('common'));
 
             $dispatcher->setEventsManager($eventManager);
             $dispatcher->setDefaultNamespace('Controller\Common');

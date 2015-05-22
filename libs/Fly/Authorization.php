@@ -65,7 +65,7 @@ class Authorization extends \Phalcon\Mvc\User\Component
         $allowed = $this->acl->isAllowed($role, $current_resource, $current_action);
 
         if ($allowed !== true && $me == null) {
-            // // khong co quyen + chua dang nhap
+            // khong co quyen + chua dang nhap
             return $this->dispatcher->forward([
                 'module' => $this->_module,
                 'controller' => 'login',

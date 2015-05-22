@@ -46,7 +46,7 @@ class Mobile
             //     }
             // });
 
-            // $eventManager->attach('dispatch', new Authorization('common'));
+            // $eventManager->attach('dispatch', new \Fly\Authorization('mobile'));
 
             $dispatcher->setEventsManager($eventManager);
             $dispatcher->setDefaultNamespace('Controller\Mobile');
