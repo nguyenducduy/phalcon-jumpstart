@@ -34,7 +34,6 @@ class BaseController extends \Phalcon\Mvc\Controller
 
     public function beforeExecuteRoute(\Phalcon\Mvc\Dispatcher $dispatcher)
     {
-
         //Registering translation
         $this->di->setShared('lang', function() {
             $language = '';

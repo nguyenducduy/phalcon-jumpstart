@@ -86,6 +86,7 @@ $model = [
     ]
 ];
 
+//Array variable to register modules in application container
 $modules = [
     'app_modules' => [
         'common'   => [
@@ -95,6 +96,10 @@ $modules = [
         'admin' => [
             'className' => 'Module\Admin',
             'path'      => ROOT_PATH . '/modules/admin/Module.php'
+        ],
+        'mobile' => [
+            'className' => 'Module\Mobile',
+            'path'      => ROOT_PATH . '/modules/mobile/Module.php'
         ]
     ]
 ];

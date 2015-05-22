@@ -107,6 +107,24 @@ class Bootstrap
         $modules = $this->getModules();
         $application->registerModules($modules);
 
+        //Detect mobile device
+        $eventsManager = new PhEventsManager();
+        $application->setEventsManager($eventsManager);
+        $eventsManager->attach('application:beforeHandleRequest',function($event, $application) {
+            $di = $application->getDi();
+            $response = $di->get('response');
+            $dispatcher = $di->get('dispatcher');
+
+            $detect = new \Fly\Mobile_Detect();
+            if ($detect->isMobile() && SUBDOMAIN != 'm' && $dispatcher->getModuleName() == 'common') {
+                //begin redirect link to mobile version
+                $curPageURL = \Fly\Helper::getCurrentUrl();
+                $curPageURL = str_replace(array('http://', 'https://'), array('http://m.', 'https://m.'), $curPageURL);
+
+                $response->redirect($curPageURL, true);
+            }
+        });
+
         return $application->handle()->getContent();
     }
 
@@ -170,15 +188,6 @@ class Bootstrap
 
         // Creates the autoloader
         $loader = new PhLoader();
-
-        // $loader->registerDirs(
-        //     [
-        //         $config->app_path->libs,
-        //     ]
-        // );
-
-        // Register the Library namespace as well as the common module
-        // since it needs to always be available
         $loader->registerNamespaces(
             [
                 'Fly' => $config->app_path->libs,
@@ -249,6 +258,11 @@ class Bootstrap
          */
         $this->di->setShared('url', function () use ($config, $request) {
             $url = new PhUrl();
+
+            if (SUBDOMAIN == 'm') {
+                $config->app_baseUri = 'm.' . $config->app_baseUri;
+            }
+
             $url->setBaseUri($request->getScheme() . '://' . $config->app_baseUri . '/');
             $url->setStaticBaseUri($request->getScheme() . '://' . $config->app_resourceUri . '/');
             return $url;
@@ -263,13 +277,39 @@ class Bootstrap
     public function initRouter($options = [])
     {
         $config = $this->di['config'];
+        $loader = $this->di['loader'];
 
-        $this->di->setShared('router', function () use ($config) {
+        $this->di->setShared('router', function () use ($config, $loader) {
             $router = new PhRouter(false);
             $router->setDefaultModule('common');
 
             foreach ($config['app_routes'] as $route => $params) {
                 $router->add($route, (array) $params)->setHostName($config->app_baseUri);
+            }
+
+            if (SUBDOMAIN == 'm') {
+                $router->setDefaultModule('mobile');
+                $mobileRoutes = [
+                    '/:controller' => [
+                        'module'     => 'mobile',
+                        'controller' => 1,
+                    ],
+                    '/:controller/:action/:params' => [
+                        'module'     => 'mobile',
+                        'controller' => 1,
+                        'action'     => 2,
+                        'params'     => 3,
+                    ],
+                    '/' => [
+                        'module'     => 'mobile',
+                        'controller' => 'index',
+                        'action' => 'index',
+                    ]
+                ];
+
+                foreach ($mobileRoutes as $route => $params) {
+                    $router->add($route, (array) $params)->setHostName('m.' . $config->app_baseUri);
+                }
             }
 
             $router->removeExtraSlashes(true);
@@ -288,7 +328,7 @@ class Bootstrap
         $di = $this->di;
 
         $di->set('dispatcher', function($di) {
-            $evManager = $di->getShared('eventsManager');
+            $evManager = new PhEventsManager();
 
             $dispatcher = new \Phalcon\Mvc\Dispatcher();
             $dispatcher->setEventsManager($evManager);

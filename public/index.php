@@ -7,6 +7,8 @@ date_default_timezone_set('Asia/Bangkok');
 define('FLAG_DEBUG', true);
 define('ROOT_PATH', realpath('..')); // not have end slash
 define('DS', DIRECTORY_SEPARATOR);
+$sudomaininfo = explode(".",$_SERVER['HTTP_HOST']);
+define('SUBDOMAIN', array_shift($sudomaininfo));
 
 // Using require once because I want to get the specific
 // bootloader class here. The loader will be initialized
