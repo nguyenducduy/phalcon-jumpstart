@@ -138,6 +138,7 @@ class BaseController extends \Phalcon\Mvc\Controller
         $controllerName = $this->dispatcher->getControllerName();
         $actionName = $this->dispatcher->getActionName();
         $url = $moduleName . '/' . $controllerName . '/' . $actionName;
+
         return str_replace('/index', '', $url);
     }
 }

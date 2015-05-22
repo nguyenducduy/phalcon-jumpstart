@@ -14,7 +14,7 @@
                     {% endif %}
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2">
-                        <a href="{{ url('/admin/user/add/redirect/' ~ redirectUrl) }}" class="btn btn-sm btn-success addBtn"><i class="fa fa-plus"></i>&nbsp; {{ lang.get('label_add_button') }}</a>
+                        <a href="{{ url('admin/user/add/redirect/' ~ redirectUrl) }}" class="btn btn-sm btn-success addBtn"><i class="fa fa-plus"></i>&nbsp; {{ lang.get('label_add_button') }}</a>
                     </div>
                 </div>
                 <div class="colg-lg-6 col-md-6 col-sm-12">
@@ -41,7 +41,7 @@
                                 <th>Email</th>
                                 <th>Password</th>
                                 <th>
-                                    <a href="/admin/user?orderby=role&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}">
+                                    <a href="{{ url.getBaseUri() }}admin/user?orderby=role&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}&page={{ paginator.current }}">
                                         Role
                                     </a>
                                 </th>
@@ -70,17 +70,17 @@
                                 <td>
                                     <input type="checkbox" name="fbulkid[]" value="{{ user.id }}" {% if formData['fbulkid'] is defined %}{% for key, value in formData['fbulkid'] if value == user.id %}checked="checked"{% endfor %}{% endif %} />
                                 </td>
-                                <td><img class="img-cirle" src="{{ config.app_baseUri ~ user.avatar }}"/></td>
+                                <td><img class="img-cirle" src="{{ static_url(user.avatar) }}" width="50" height="50" /></td>
                                 <td>{{ user.name }}</td>
                                 <td>{{ user.email }}</td>
                                 <td>{{ user.password }}</td>
                                 <td><code>{{ user.getRoleName() }}</code></td>
                                 <td><span class="label label-{{ user.getStatusLabel() }}">{{ user.getStatusName()|upper }}</span></td>
-                                <td>{{ user.datecreated }}</td>
+                                <td>{{ date('Y/m/d, h:m', user.datecreated) }}</td>
                                 <td>
                                     <div class="btn-group btn-group-xs">
-                                        <a href="{{ url('/admin/user/edit/id/' ~ user.id ~ '/redirect/' ~ redirectUrl) }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
-                                        <a href="javascript:deleteConfirm('{{ url('/admin/user/delete/id/' ~ user.id ~ '/redirect/' ~ redirectUrl) }}', '{{ user.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ url('admin/user/edit/id/' ~ user.id ~ '/redirect/' ~ redirectUrl) }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
+                                        <a href="javascript:deleteConfirm('{{ url('admin/user/delete/id/' ~ user.id ~ '/redirect/' ~ redirectUrl) }}', '{{ user.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </td>
                             </tr>

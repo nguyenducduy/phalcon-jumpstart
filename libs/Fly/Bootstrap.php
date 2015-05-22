@@ -250,7 +250,7 @@ class Bootstrap
         $this->di->setShared('url', function () use ($config, $request) {
             $url = new PhUrl();
             $url->setBaseUri($request->getScheme() . '://' . $config->app_baseUri . '/');
-            $url->setStaticBaseUri($request->getScheme() . '://' . $config->app_resourceUri);
+            $url->setStaticBaseUri($request->getScheme() . '://' . $config->app_resourceUri . '/');
             return $url;
         });
     }

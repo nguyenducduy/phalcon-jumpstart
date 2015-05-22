@@ -14,7 +14,7 @@
                     {% endif %}
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2">
-                        <a href="{{ url('/admin/{{CONTROLLER_URL}}/add/redirect/' ~ redirectUrl) }}" class="btn btn-sm btn-success addBtn"><i class="fa fa-plus"></i>&nbsp; {{ lang.get('label_add_button') }}</a>
+                        <a href="{{ url('admin/{{CONTROLLER_URL}}/add/redirect/' ~ redirectUrl) }}" class="btn btn-sm btn-success addBtn"><i class="fa fa-plus"></i>&nbsp; {{ lang.get('label_add_button') }}</a>
                     </div>
                 </div>
                 <div class="colg-lg-6 col-md-6 col-sm-12">
@@ -63,8 +63,8 @@
 {{TD_PROPERTY}}
                                 <td>
                                     <div class="btn-group btn-group-xs">
-                                        <a href="{{ url('/admin/{{CONTROLLER_URL}}/edit/id/' ~ {{CONTROLLER_URL}}.id ~ '/redirect/' ~ redirectUrl) }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
-                                        <a href="javascript:deleteConfirm('{{ config.app_baseUri }}admin/{{CONTROLLER_URL}}/delete/id/{{ {{CONTROLLER_URL}}.id }}/redirect/{{ redirectUrl }}', '{{ {{CONTROLLER_URL}}.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ url('admin/{{CONTROLLER_URL}}/edit/id/' ~ {{CONTROLLER_URL}}.id ~ '/redirect/' ~ redirectUrl) }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
+                                        <a href="javascript:deleteConfirm('{{ url('admin/{{CONTROLLER_URL}}/delete/id/' ~ {{CONTROLLER_URL}}.id '/redirect/' ~ redirectUrl) }}', '{{ {{CONTROLLER_URL}}.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </td>
                             </tr>

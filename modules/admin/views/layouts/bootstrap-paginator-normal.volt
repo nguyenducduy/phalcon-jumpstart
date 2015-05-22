@@ -9,7 +9,7 @@
 
         {% if paginator.total_pages > 1 %}
             {% if paginator.current != 1 and paginator.total_items >= 10 %}
-                {% set pageString = '<li>'~ linkTo(""~paginateUrl~"&page="~page.before, "&laquo") ~'</li>' %}
+                {% set pageString = '<li>'~ linkTo(""~paginateUrl~"&page="~paginator.before, "&laquo") ~'</li>' %}
             {% else %}
                 {% set pageString = '<li style="display:none">'~ linkTo("#", "&laquo") ~'</li>' %}
             {% endif %}

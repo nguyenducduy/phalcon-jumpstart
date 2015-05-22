@@ -213,17 +213,16 @@ class UserController extends FlyController
         $id = (int) $this->dispatcher->getParam('id');
         $redirectUrl = (string) urldecode(base64_decode($this->dispatcher->getParam('redirect')));
 
+        $myUser = \Model\User::findFirst(['id = :id:', 'bind' => ['id' => (int) $id]])->delete();
 
-        // $myUser = \Model\User::findFirst(['id = :id:', 'bind' => ['id' => (int) $id]])->delete();
-
-        // if ($myUser) {
-        //     $this->flash->success(str_replace('###id###', $id, $this->lang->get('message_delete_success')));
-        // } else {
-        //     foreach ($myUser->getMessages() as $msg) {
-        //         $message .= $msg->getMessage() . "</br>";
-        //     }
-        //     $this->flashSession->error($message);
-        // }
+        if ($myUser) {
+            $this->flash->success(str_replace('###id###', $id, $this->lang->get('message_delete_success')));
+        } else {
+            foreach ($myUser->getMessages() as $msg) {
+                $message .= $msg->getMessage() . "</br>";
+            }
+            $this->flashSession->error($message);
+        }
 
         return $this->response->redirect($redirectUrl);
     }

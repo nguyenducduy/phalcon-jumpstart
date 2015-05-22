@@ -507,7 +507,7 @@ class CodegeneratorController extends FlyController
             if (!isset($option['exclude_i'])) {
                 if (isset($option['sortable'])) {
                     $thContent .= '                                <th>' . "\n";
-                    $thContent .= '                                    <a href="{{ config.app_baseUri }}admin/'. strtolower($controller) .'?orderby='. $option['property'] .'&ordertype={% if formData[\'orderType\']|lower == \'desc\'%}asc{% else %}desc{% endif %}{% if formData[\'conditions\'][\'keyword\'] != \'\' %}&keyword={{ formData[\'conditions\'][\'keyword\'] }}{% endif %}">' . "\n";
+                    $thContent .= '                                    <a href="{{ url.getBaseUri() }}admin/'. strtolower($controller) .'?orderby='. $option['property'] .'&ordertype={% if formData[\'orderType\']|lower == \'desc\'%}asc{% else %}desc{% endif %}{% if formData[\'conditions\'][\'keyword\'] != \'\' %}&keyword={{ formData[\'conditions\'][\'keyword\'] }}{% endif %}">' . "\n";
                     $thContent .= '                                        '. $option['label'] .'' . "\n";
                     $thContent .= '                                    </a>' . "\n";
                     $thContent .= '                                </th>' . "\n";
@@ -558,7 +558,7 @@ class CodegeneratorController extends FlyController
                         $addInputFunction .= '    $(document).ready(function() {' . "\n";
                         $addInputFunction .= '        Dropzone.autoDiscover = false;' . "\n";
                         $addInputFunction .= '        $(\'div#upload'. ucfirst($option['property']) .'\').dropzone({' . "\n";
-                        $addInputFunction .= '            url: root_url + \'/admin/'. strtolower($controller) .'/upload'. $option['property'] .'\',' . "\n";
+                        $addInputFunction .= '            url: root_url + \'admin/'. strtolower($controller) .'/upload'. $option['property'] .'\',' . "\n";
                         $addInputFunction .= '            paramName: \'f'. $option['property'] .'\',' . "\n";
                         $addInputFunction .= '            maxFileSize: 2,' . "\n";
                         $addInputFunction .= '            maxFiles: 1,' . "\n";
