@@ -44,7 +44,7 @@
                                 <div class="pull-left">
                                     <div class="ckbox ckbox-primary mt10">
                                         <input type="checkbox" name="fcookie" id="rememberMe" value="remember-me" {% if formData['fcookie'] == true %}checked{% endif %}>
-                                        <label for="rememberMe">Nhớ mật khẩu</label>
+                                        <label for="rememberMe" style="display: inline-block">Nhớ mật khẩu</label>
                                     </div>
                                 </div>
                                 <div class="pull-right">

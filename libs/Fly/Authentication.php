@@ -42,6 +42,7 @@ class Authentication extends \Phalcon\Mvc\User\Component
                 $me->email = $myUser->email;
                 $me->name = $myUser->name;
                 $me->role = $myUser->role;
+                $me->roleName = $myUser->getRoleName();
                 $me->avatar = $myUser->avatar;
 
                 // create session for user

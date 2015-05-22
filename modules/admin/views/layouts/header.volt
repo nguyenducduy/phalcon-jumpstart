@@ -28,7 +28,8 @@
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
-                        <li><a href="{{ config.app_baseUri }}admin/profile"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                        <li><a href="{{ config.app_baseUri }}admin/user/edit/id/{{ session.get('me').id }}/redirect/{{ redirectUrl }}"><i class="glyphicon glyphicon-lock"></i> Change password</a></li>
+                        <li><a href="{{ config.app_baseUri }}admin/user/edit/id/{{ session.get('me').id }}/redirect/{{ redirectUrl }}"><i class="glyphicon glyphicon-user"></i> Edit profile</a></li>
                         <li class="divider"></li>
                         <li><a href="{{ config.app_baseUri }}admin/logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
                     </ul>

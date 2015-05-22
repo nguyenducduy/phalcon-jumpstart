@@ -52,7 +52,15 @@ class Authorization extends \Phalcon\Mvc\User\Component
         $current_resource = $this->_module . '-' . $dispatcher->getControllerName();
         $current_action = $dispatcher->getActionName();
 
-        $this->getAcl();
+        if (!is_file(ROOT_PATH . '/cache/security/acl.data')) {
+            $this->getAcl();
+
+            //Cache acl in file system.
+            $this->filemanager->put('cache/security/acl.data', serialize($this->acl));
+        } else {
+            // Restore acl object from serialized file
+            $this->acl = unserialize($this->filemanager->read('cache/security/acl.data'));
+        }
 
         $allowed = $this->acl->isAllowed($role, $current_resource, $current_action);
 

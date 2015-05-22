@@ -26,7 +26,7 @@ return [
             'index:*',
             'login:*',
             'dashboard:*',
-            'generator:*',
+            'codegenerator:*',
             'logs:*',
             'user:*',
             'notfound:*',
@@ -57,7 +57,6 @@ return [
         ),
         'Common' => array (
             'index:*',
-            'user:*',
         ),
     ],
 ];

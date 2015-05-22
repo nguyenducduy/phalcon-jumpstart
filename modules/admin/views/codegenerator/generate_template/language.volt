@@ -1,8 +1,8 @@
 <?php
 return [
     //Title
-    'title_index' => '{{CONTROLLER_NAME}} Listing',
-    'title_add' => 'Add new {{CONTROLLER_NAME}}',
+    'title_index' => '{{CONTROLLER_NAME}}',
+    'title_add' => '{{CONTROLLER_NAME}}',
     'title_edit' => 'Edit {{CONTROLLER_NAME}}',
     'title_listing' => 'Listing',
     'title_adding' => 'Add',

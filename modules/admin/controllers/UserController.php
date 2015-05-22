@@ -122,7 +122,7 @@ class UserController extends FlyController
                 $myUser->assign([
                     'name' => $formData['fname'],
                     'email' => $formData['femail'],
-                    'password' => $formData['fpassword'],
+                    'password' => $this->security->hash($formData['fpassword']),
                     'role' => $formData['frole'],
                     'avatar' => $formData['favatar'],
                     'status' => $formData['fstatus'],
@@ -149,6 +149,7 @@ class UserController extends FlyController
             'formData' => $formData,
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\User::getStatusList(),
+            'roleList' => \Model\User::getRoleList(),
         ]);
     }
 
@@ -165,7 +166,6 @@ class UserController extends FlyController
         ]);
         $formData['fname'] = $myUser->name;
         $formData['femail'] = $myUser->email;
-        $formData['fpassword'] = $myUser->password;
         $formData['frole'] = $myUser->role;
         $formData['favatar'] = $myUser->avatar;
         $formData['fstatus'] = $myUser->status;
@@ -177,7 +177,6 @@ class UserController extends FlyController
                 $myUser->assign([
                     'name' => $formData['fname'],
                     'email' => $formData['femail'],
-                    'password' => $formData['fpassword'],
                     'role' => $formData['frole'],
                     'avatar' => $formData['favatar'],
                     'status' => $formData['fstatus'],
@@ -204,6 +203,7 @@ class UserController extends FlyController
             'formData' => $formData,
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\User::getStatusList(),
+            'roleList' => \Model\User::getRoleList(),
         ]);
     }
 

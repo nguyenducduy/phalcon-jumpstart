@@ -1,11 +1,11 @@
 <div class="leftpanel">
     <div class="media profile-left">
-        <a class="pull-left profile-thumb" href="{{ config.app_baseUri }}admin/profile">
+        <a class="pull-left profile-thumb" href="{{ config.app_baseUri }}admin/user/edit/id/{{ session.get('me').id }}/redirect/{{ redirectUrl }}">
             <img class="img-circle" src="{{ config.app_baseUri ~ session.get('me').avatar }}" alt="">
         </a>
         <div class="media-body">
             <h4 class="media-heading">{{ session.get('me').name }}</h4>
-            <small class="text-muted">{{ session.get('me').role }}</small>
+            <small class="text-muted">{{ session.get('me').roleName }}</small>
         </div>
     </div><!-- media -->
 
@@ -32,7 +32,7 @@
 
         <li class="parent"><a href="#"><i class="fa fa-users"></i> <span>User</span></a>
             <ul class="children">
-                <li id="user_add"><a href="{{ config.app_baseUri }}admin/user/add"><i class="fa fa-plus-circle"></i>&nbsp; Add</a></li>
+                <li id="user_add"><a href="{{ config.app_baseUri }}admin/user/add/redirect/{{ redirectUrl }}"><i class="fa fa-plus-circle"></i>&nbsp; Add</a></li>
                 <li id="user_list"><a href="{{ config.app_baseUri }}admin/user">List</a></li>
             </ul>
         </li>

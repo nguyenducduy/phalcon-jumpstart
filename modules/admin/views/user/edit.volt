@@ -28,15 +28,16 @@
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Email</label>
-                    <input type="text" name="femail" value="{% if formData['femail'] is defined %}{{ formData['femail'] }}{% endif %}" class="form-control input-sm" />
-                </div>
-                <div class="form-group" >
-                    <label class="control-label">Password</label>
-                    <input type="text" name="fpassword" value="{% if formData['fpassword'] is defined %}{{ formData['fpassword'] }}{% endif %}" class="form-control input-sm" />
+                    <input type="text" name="femail" value="{% if formData['femail'] is defined %}{{ formData['femail'] }}{% endif %}" class="form-control input-sm" disabled="disabled" />
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Role</label>
-                    <input type="text" name="frole" value="{% if formData['frole'] is defined %}{{ formData['frole'] }}{% endif %}" class="form-control input-sm" />
+                    <select name="frole" class="form-control input-sm">
+                        <option value="0">- - - -</option>
+                        {% for role in roleList %}
+                            <option value="{{ role['value'] }}" {% if formData['frole'] is defined and formData['frole'] == role['value'] %}selected="selected"{% endif %}>{{ role['name'] }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="form-group">
                     <div id="uploadAvatar" class="dropzone"></div>

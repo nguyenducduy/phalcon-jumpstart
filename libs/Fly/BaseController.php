@@ -56,6 +56,7 @@ class BaseController extends \Phalcon\Mvc\Controller
         });
 
         $this->view->setVar('lang', $this->di->get('lang'));
+        $this->view->setVar('redirectUrl', base64_encode(urlencode($this->getCurrentUrl())));
     }
 
     /**
@@ -125,35 +126,6 @@ class BaseController extends \Phalcon\Mvc\Controller
                 unlink($file);
             }
         }
-    }
-
-    /**
-     * js minifier for knockout handler
-     */
-    public function useKo($koArr)
-    {
-        $moduleName = $this->dispatcher->getModuleName();
-        $controllerName = $this->dispatcher->getControllerName();
-        $actionName = $this->dispatcher->getActionName();
-
-        if (FLAG_DEBUG) {
-            $prefix = '';
-        } else {
-            $prefix = ROOT_PATH . '/';
-        }
-
-        // load models
-        if (!empty($koArr['models'])) {
-            foreach ($koArr['models'] as $model) {
-                $this->assets->addJs($prefix . $this->config->app_ko->models . \Phalcon\Text::camelize($model) .'.js');
-            }
-        }
-
-        // load view models
-        $this->assets->addJs($prefix . $this->config->app_ko->vm . $moduleName .'/'. $controllerName . '/' . \Phalcon\Text::camelize($actionName) .'.js');
-        $this->view->koScript = true;
-
-        return true;
     }
 
     /**

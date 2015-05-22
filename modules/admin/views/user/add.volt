@@ -36,7 +36,12 @@
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Role</label>
-                    <input type="text" name="frole" value="{% if formData['frole'] is defined %}{{ formData['frole'] }}{% endif %}" class="form-control input-sm" />
+                    <select name="frole" class="form-control input-sm">
+                        <option value="0">- - - -</option>
+                        {% for role in roleList %}
+                            <option value="{{ role['value'] }}" {% if formData['frole'] is defined and formData['frole'] == role['value'] %}selected="selected"{% endif %}>{{ role['name'] }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="form-group">
                     <div id="uploadAvatar" class="dropzone"></div>

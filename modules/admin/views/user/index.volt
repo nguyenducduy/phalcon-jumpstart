@@ -74,8 +74,8 @@
                                 <td>{{ user.name }}</td>
                                 <td>{{ user.email }}</td>
                                 <td>{{ user.password }}</td>
-                                <td>{{ user.role }}</td>
-                                <td><span class="label label-primary">{{ user.getStatusName()|upper }}</span></td>
+                                <td><code>{{ user.getRoleName() }}</code></td>
+                                <td><span class="label label-{{ user.getStatusLabel() }}">{{ user.getStatusName()|upper }}</span></td>
                                 <td>{{ user.datecreated }}</td>
                                 <td>
                                     <div class="btn-group btn-group-xs">

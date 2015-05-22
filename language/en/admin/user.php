@@ -1,8 +1,8 @@
 <?php
 return [
     //Title
-    'title_index' => 'User Listing',
-    'title_add' => 'Add new User',
+    'title_index' => 'User',
+    'title_add' => 'User',
     'title_edit' => 'Edit User',
     'title_listing' => 'Listing',
     'title_adding' => 'Add',

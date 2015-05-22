@@ -27,7 +27,7 @@ return array(
         '../js/common/materialize.min.js',
     ),
 	'cssCommon' => array(
-        '../css/common/materialize.min.css',
+        '',
     ),
 	'cssAdmin' => array(
         '../css/admin/bootstrap-override.css',

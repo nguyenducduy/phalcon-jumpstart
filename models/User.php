@@ -61,8 +61,8 @@ class User extends FlyModel
     public $datemodified;
 
 
-    const STATUS_ENABLE = 1; 
-    const STATUS_DISABLE = 3; 
+    const STATUS_ENABLE = 1;
+    const STATUS_DISABLE = 3;
 
     protected $lang;
 
@@ -245,6 +245,45 @@ class User extends FlyModel
         ];
     }
 
+    public static function getRoleList()
+    {
+        return $data = [
+            [
+                "name" => 'Administrator',
+                "value" => ROLE_ADMIN
+            ],
+            [
+                "name" => 'Moderator',
+                "value" => ROLE_MOD
+            ],
+            [
+                "name" => 'Member',
+                "value" => ROLE_MEMBER
+            ],
+            [
+                "name" => 'Guest',
+                "value" => ROLE_GUEST
+            ],
+        ];
+    }
+
+    public function getStatusLabel()
+    {
+        $name = '';
+
+        switch ($this->status) {
+            case self::STATUS_ENABLE:
+                $name = 'success';
+                break;
+            case self::STATUS_DISABLE:
+                $name = 'danger';
+                break;
+
+        }
+
+        return $name;
+    }
+
     public static function getStatusListArray()
     {
         return [
@@ -252,6 +291,28 @@ class User extends FlyModel
             self::STATUS_DISABLE,
 
         ];
+    }
+
+    public function getRoleName()
+    {
+        $name = '';
+
+        switch ($this->role) {
+            case ROLE_ADMIN:
+                $name = 'Administrator';
+                break;
+            case ROLE_MOD:
+                $name = 'Moderator';
+                break;
+            case ROLE_MEMBER:
+                $name = 'Member';
+                break;
+            case ROLE_GUEST:
+                $name = 'Guest';
+                break;
+        }
+
+        return $name;
     }
 
 
