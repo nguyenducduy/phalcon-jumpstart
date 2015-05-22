@@ -213,18 +213,19 @@ class UserController extends FlyController
         $id = (int) $this->dispatcher->getParam('id');
         $redirectUrl = (string) urldecode(base64_decode($this->dispatcher->getParam('redirect')));
 
-        $myUser = \Model\User::findFirst(['id = :id:', 'bind' => ['id' => (int) $id]])->delete();
 
-        if ($myUser) {
-            $this->flash->success(str_replace('###id###', $id, $this->lang->get('message_delete_success')));
-        } else {
-            foreach ($myUser->getMessages() as $msg) {
-                $message .= $msg->getMessage() . "</br>";
-            }
-            $this->flashSession->error($message);
-        }
+        // $myUser = \Model\User::findFirst(['id = :id:', 'bind' => ['id' => (int) $id]])->delete();
 
-        return $this->response->redirect($redirectUrl);
+        // if ($myUser) {
+        //     $this->flash->success(str_replace('###id###', $id, $this->lang->get('message_delete_success')));
+        // } else {
+        //     foreach ($myUser->getMessages() as $msg) {
+        //         $message .= $msg->getMessage() . "</br>";
+        //     }
+        //     $this->flashSession->error($message);
+        // }
+
+        return $this->response->redirect($redirectUrl, true);
     }
 
     public function uploadavatarAction()

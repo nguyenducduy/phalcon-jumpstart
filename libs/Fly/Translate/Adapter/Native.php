@@ -36,15 +36,15 @@ class Native extends Adapter implements AdapterInterface
     public function __construct($options)
     {
         if (!isset($options['module'])) {
-        throw new Exception("Parameter 'namespace' is required");
+            $options['module'] = 'common';
         }
 
         if (!isset($options['controller'])) {
-        throw new Exception("Parameter 'controller' is required");
+            $options['controller'] = 'index';
         }
 
         if (!isset($options['language'])) {
-        throw new Exception("Parameter 'language' is required");
+            $options['language'] = 'en';
         }
 
         $this->options = $options;

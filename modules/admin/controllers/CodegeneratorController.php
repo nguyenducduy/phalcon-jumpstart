@@ -336,20 +336,24 @@ class CodegeneratorController extends FlyController
                 switch ($option['validation']) {
                     case 'presenceof':
                         $validationString .= '        $this->validate(new \Phalcon\Mvc\Model\Validator\PresenceOf(' . "\n";
+                        $validationLanguage = 'notempty';
                         break;
                     case 'email':
                         $validationString .= '        $this->validate(new \Phalcon\Mvc\Model\Validator\Email(' . "\n";
+                        $validationLanguage = 'valid_email';
                         break;
                     case 'numericality':
                         $validationString .= '        $this->validate(new \Phalcon\Mvc\Model\Validator\Numericality(' . "\n";
+                        $validationLanguage = 'isnum';
                         break;
                     case 'uniqueness':
                         $validationString .= '        $this->validate(new \Phalcon\Mvc\Model\Validator\Uniqueness(' . "\n";
+                        $validationLanguage = 'unique';
                         break;
                 }
                 $validationString .= '            [' . "\n";
                 $validationString .= '                \'field\'  => \''. $option['property'] .'\',' . "\n";
-                $validationString .= '                \'message\' => $this->lang->get(\'message_'. $option['property'] .'_notempty\')' . "\n";
+                $validationString .= '                \'message\' => $this->lang->get(\'message_'. $option['property'] .'_'. $validationLanguage .'\')' . "\n";
                 $validationString .= '            ]' . "\n";
                 $validationString .= '        ));' . "\n\n";
                 $validationContent .= $validationString;
@@ -554,7 +558,7 @@ class CodegeneratorController extends FlyController
                         $addInputFunction .= '    $(document).ready(function() {' . "\n";
                         $addInputFunction .= '        Dropzone.autoDiscover = false;' . "\n";
                         $addInputFunction .= '        $(\'div#upload'. ucfirst($option['property']) .'\').dropzone({' . "\n";
-                        $addInputFunction .= '            url: root_url + \'admin/'. strtolower($controller) .'/upload'. $option['property'] .'\',' . "\n";
+                        $addInputFunction .= '            url: root_url + \'/admin/'. strtolower($controller) .'/upload'. $option['property'] .'\',' . "\n";
                         $addInputFunction .= '            paramName: \'f'. $option['property'] .'\',' . "\n";
                         $addInputFunction .= '            maxFileSize: 2,' . "\n";
                         $addInputFunction .= '            maxFiles: 1,' . "\n";

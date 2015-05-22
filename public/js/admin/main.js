@@ -1,8 +1,7 @@
 // Delete alert confirm box
 function deleteConfirm(theURL, id) {
-    // if (confirm('Are you want to DELETE?')) {
-    //     window.location.href=theURL;
-    // }
+  console.log(theURL);
+
     toastr.options = {
       "closeButton": true,
       "debug": false,

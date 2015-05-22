@@ -2,7 +2,7 @@
     <div class="headerwrapper">
         <div class="header-left">
             <a href="index.html" class="logo">
-                <img src="{{ config.app_baseUri }}images/logo.png" alt="Phalcon Jumpstart" width="30" />
+                <img src="{{ static_url('/images/logo.png') }}" alt="Phalcon Jumpstart" width="30" />
             </a>
             <div class="pull-right">
                 <a href="#" class="menu-collapse">
@@ -28,10 +28,10 @@
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
-                        <li><a href="{{ config.app_baseUri }}admin/user/edit/id/{{ session.get('me').id }}/redirect/{{ redirectUrl }}"><i class="glyphicon glyphicon-lock"></i> Change password</a></li>
-                        <li><a href="{{ config.app_baseUri }}admin/user/edit/id/{{ session.get('me').id }}/redirect/{{ redirectUrl }}"><i class="glyphicon glyphicon-user"></i> Edit profile</a></li>
+                        <li><a href="{{ url('/admin/user/edit/id/' ~ session.get('me').id ~ '/redirect/' ~ redirectUrl) }}"><i class="glyphicon glyphicon-lock"></i> Change password</a></li>
+                        <li><a href="{{ url('/admin/user/edit/id/' ~ session.get('me').id ~ '/redirect/' ~ redirectUrl) }}"><i class="glyphicon glyphicon-user"></i> Edit profile</a></li>
                         <li class="divider"></li>
-                        <li><a href="{{ config.app_baseUri }}admin/logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                        <li><a href="{{ url('/admin/logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>

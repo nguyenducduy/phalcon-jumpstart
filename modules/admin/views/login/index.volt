@@ -8,9 +8,9 @@
 
         {{ get_title() }}
 
-        <link href="{{ config.app_baseUri }}plugins/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="{{ config.app_baseUri }}min/index.php?g=cssAdmin&rev={{ config.cssVersion }}" rel="stylesheet">
-        <script src="{{ config.app_baseUri }}min/index.php?g=jquery&rev={{ config.jsVersion }}"></script>
+        <link href="{{ static_url('/plugins/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ static_url('/min/index.php?g=cssAdmin&rev=' ~ config.cssVersion) }}" rel="stylesheet">
+        <script src="{{ static_url('/min/index.php?g=jquery&rev=' ~ config.jsVersion) }}"></script>
     </head>
 
     <body class="signin">
@@ -22,7 +22,7 @@
                     <div class="panel-body">
                         {{ flash.output() }}
                         <div class="logo text-center">
-                            <img src="{{ config.app_baseUri }}images/logo-brand.png" alt="Phalcon Jumpstart Logo" width="220">
+                            <img src="{{ static_url('/images/logo-brand.png') }}" alt="Phalcon Jumpstart Logo" width="220">
                         </div>
                         <br />
                         <h4 class="text-center mb5">Là thành viên?</h4>
@@ -56,7 +56,7 @@
                 </div><!-- panel -->
             </section>
         </form>
-        <script type="text/javascript" src="{{ config.app_baseUri }}plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="{{ config.app_baseUri }}min/index.php?g=jsAdmin&rev={{ config.jsVersion }}"></script>
+        <script type="text/javascript" src="{{ static_url('/plugins/bootstrap/bootstrap.min.js') }}"></script>
+        <script src="{{ static_url('/min/index.php?g=jsAdmin&rev=' ~ config.jsVersion) }}"></script>
     </body>
 </html>

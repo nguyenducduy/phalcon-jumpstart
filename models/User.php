@@ -85,12 +85,12 @@ class User extends FlyModel
 
     public function beforeCreate()
     {
-
+        $this->datecreated = time();
     }
 
     public function beforeUpdate()
     {
-
+        $this->datemodified = time();
     }
 
     public function validation()
@@ -105,7 +105,7 @@ class User extends FlyModel
         $this->validate(new \Phalcon\Mvc\Model\Validator\Uniqueness(
             [
                 'field'  => 'email',
-                'message' => $this->lang->get('message_email_notempty')
+                'message' => $this->lang->get('message_email_unique')
             ]
         ));
 
@@ -119,14 +119,14 @@ class User extends FlyModel
         $this->validate(new \Phalcon\Mvc\Model\Validator\Numericality(
             [
                 'field'  => 'role',
-                'message' => $this->lang->get('message_role_notempty')
+                'message' => $this->lang->get('message_role_isnum')
             ]
         ));
 
         $this->validate(new \Phalcon\Mvc\Model\Validator\Numericality(
             [
                 'field'  => 'status',
-                'message' => $this->lang->get('message_status_notempty')
+                'message' => $this->lang->get('message_status_isnum')
             ]
         ));
 

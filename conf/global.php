@@ -7,8 +7,8 @@
 $base = [
     'app_version'     => '1.0',
     'app_name'        => 'Jumpstart PhalconPHP',
-    'app_baseUri'     => 'http://localhost/phalcon-jumpstart/',
-    'app_resourceUri' => 'http://localhost/phalcon-jumpstart/',
+    'app_baseUri'     => 'newpj.site',
+    'app_resourceUri' => 'newpj.site',
     'app_db'          => [
         'adapter'     => 'Mysql',
         'host'        => 'localhost',

@@ -5,7 +5,7 @@
     {{ flash.output() }}
     <div class="row">
         <div class="col-lg-12">
-            <a href="{{ config.app_baseUri ~ redirectUrl }}">
+            <a href="{{ url('/' ~ redirectUrl) }}">
                 <i class="fa fa-angle-double-left"></i> &nbsp; {{ lang.get('label_back_button') }}
             </a>
         </div>

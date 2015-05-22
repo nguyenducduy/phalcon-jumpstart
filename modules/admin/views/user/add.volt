@@ -5,7 +5,7 @@
     {{ flash.output() }}
     <div class="row">
         <div class="col-lg-12">
-            <a href="{{ config.app_baseUri ~ redirectUrl }}">
+            <a href="{{ url('/' ~ redirectUrl) }}">
                 <i class="fa fa-angle-double-left"></i> &nbsp; {{ lang.get('label_back_button') }}
             </a>
         </div>
@@ -74,7 +74,7 @@
     $(document).ready(function() {
         Dropzone.autoDiscover = false;
         $('div#uploadAvatar').dropzone({
-            url: root_url + 'admin/user/uploadavatar',
+            url: root_url + '/admin/user/uploadavatar',
             paramName: 'favatar',
             maxFileSize: 2,
             maxFiles: 1,

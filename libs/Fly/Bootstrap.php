@@ -71,13 +71,13 @@ class Bootstrap
             'session',
             'config',
             'permission',
+            'url',
             'loader',
             'database',
             'logger',
             'environment',
             'flash',
             'flashsession',
-            'url',
             'router',
             'dispatcher',
             'modelsmanager',
@@ -242,14 +242,15 @@ class Bootstrap
     public function initUrl($options = [])
     {
         $config = $this->di['config'];
-
+        $request = $this->di['request'];
         /**
          * The URL component is used to generate all kind of urls in the
          * application
          */
-        $this->di->setShared('url', function () use ($config) {
+        $this->di->setShared('url', function () use ($config, $request) {
             $url = new PhUrl();
-            $url->setBaseUri($config->app_baseUri);
+            $url->setBaseUri($request->getScheme() . '://' . $config->app_baseUri);
+            $url->setStaticBaseUri($request->getScheme() . '://' . $config->app_resourceUri);
             return $url;
         });
     }
@@ -265,11 +266,10 @@ class Bootstrap
 
         $this->di->setShared('router', function () use ($config) {
             $router = new PhRouter(false);
-
             $router->setDefaultModule('common');
 
             foreach ($config['app_routes'] as $route => $params) {
-                $router->add($route, (array) $params);
+                $router->add($route, (array) $params)->setHostName($config->app_baseUri);
             }
 
             $router->removeExtraSlashes(true);
