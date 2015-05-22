@@ -225,7 +225,7 @@ class UserController extends FlyController
         //     $this->flashSession->error($message);
         // }
 
-        return $this->response->redirect($redirectUrl, true);
+        return $this->response->redirect($redirectUrl);
     }
 
     public function uploadavatarAction()
