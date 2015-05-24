@@ -5,6 +5,7 @@
  * @var array
  */
 $base = [
+    'app_mobile'      => true,  //Mobile Friendly
     'app_version'     => '1.0',
     'app_name'        => 'Jumpstart PhalconPHP',
     'app_baseUri'     => 'newpj.site',

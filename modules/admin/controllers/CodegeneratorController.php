@@ -177,7 +177,7 @@ class CodegeneratorController extends FlyController
 
                 if (strlen($this->message) > 0) {
                     $this->flash->success($this->message);
-                    $this->logger->name = 'generator'; // Your own log name
+                    $this->logger->name = 'GENERATOR';
                     $this->logger->info($this->message);
                 } else {
                     $this->flash->error('ERROR! GENERATING FAILED.');

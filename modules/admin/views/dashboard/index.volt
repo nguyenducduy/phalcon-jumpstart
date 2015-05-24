@@ -7,32 +7,32 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th colspan="2"><h1>{{ lang._('LabelSystemInformation') }}</h1></th>
+                        <th colspan="2"><h1>{{ lang.get('LabelSystemInformation') }}</h1></th>
                     </tr>
                 </thead>
                 <tr>
-                    <td width="200" class="td_right">{{ lang._('LabelServerIp') }} :</td>
+                    <td width="200" class="td_right">{{ lang.get('LabelServerIp') }} :</td>
                     <td>{{ formData['fserverip'] }}</td>
                 </tr>
                 <tr>
-                    <td width="200" class="td_right">{{ lang._('LabelClientIp') }} :</td>
+                    <td width="200" class="td_right">{{ lang.get('LabelClientIp') }} :</td>
                     <td>{{ formData['fclientip'] }}</td>
                 </tr>
                 <tr>
-                    <td class="td_right">{{ lang._('LabelServerName') }} :</td>
+                    <td class="td_right">{{ lang.get('LabelServerName') }} :</td>
                     <td>{{ formData['fserver'] }}</td>
                 </tr>
                 <tr>
-                    <td class="td_right">{{ lang._('LabelPhpVersion') }} :</td>
+                    <td class="td_right">{{ lang.get('LabelPhpVersion') }} :</td>
                     <td>{{ formData['fphp'] }}</td>
                 </tr>
                 <tr>
-                    <td class="td_right">{{ lang._('LabelUserAgent') }} :</td>
+                    <td class="td_right">{{ lang.get('LabelUserAgent') }} :</td>
                     <td>{{ formData['fuseragent'] }}</td>
                 </tr>
 
                 <tr>
-                    <td class="td_right">{{ lang._('LabelServerTime') }} :</td>
+                    <td class="td_right">{{ lang.get('LabelServerTime') }} :</td>
                     <td>{{ formData['now'] }}</td>
                 </tr>
             </table>

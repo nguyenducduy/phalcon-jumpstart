@@ -55,21 +55,21 @@ class Authentication extends \Phalcon\Mvc\User\Component
 
                 if ($log) {
                     // Store user logged in (LOG_IN::userId::userEmail::userAgent::ip)
-                    $this->logger->name = 'access'; // Your own log name
-                    $this->logger->info('LOG_IN::'
-                            . $myUser->id .'::'
-                            . $myUser->email .'::'
-                            . $this->request->getUserAgent() .'::'
-                            . $this->request->getClientAddress()
-                        );
+                    $this->logger->name = 'LOGIN'; // Your own log name
+                    $this->logger->info(
+                        $myUser->id .'::'
+                        . $myUser->email .'::'
+                        . $this->request->getUserAgent() .'::'
+                        . $this->request->getClientAddress()
+                    );
                 }
 
                 return true;
             } else {
-                $this->flash->error('Thông tin tài khoản không đúng.');
+                $this->flash->error('Wrong user information. Try again.');
             }
         } else {
-            $this->flash->error('Thông tin tài khoản không đúng.');
+            $this->flash->error('Wrong user information. Try again.');
         }
     }
 }

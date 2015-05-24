@@ -48,7 +48,7 @@ class LoginController extends FlyController
             }
         }
 
-        $this->tag->prependTitle('Đăng nhập');
+        $this->tag->prependTitle('Login');
         $this->view->setVars([
             'formData' => $formData
         ]);

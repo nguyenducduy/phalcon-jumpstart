@@ -111,13 +111,14 @@ class Bootstrap
         $eventsManager = new PhEventsManager();
         $application->setEventsManager($eventsManager);
         $eventsManager->attach('application:beforeHandleRequest',function($event, $application) {
+            $config = $this->di->get('config');
             $response = $this->di->get('response');
             $dispatcher = $this->di->get('dispatcher');
             $cookie = $this->di->get('cookie');
 
             //Detect mobile device
             $detect = new \Fly\Mobile_Detect();
-            if ($detect->isMobile() && SUBDOMAIN != 'm' && $dispatcher->getModuleName() == 'common') {
+            if ($config->app_mobile == true && $detect->isMobile() && SUBDOMAIN != 'm' && $dispatcher->getModuleName() == 'common') {
                 //begin redirect link to mobile version
                 $curPageURL = \Fly\Helper::getCurrentUrl();
                 $curPageURL = str_replace(array('http://', 'https://'), array('http://m.', 'https://m.'), $curPageURL);

@@ -43,9 +43,17 @@ class IndexController extends FlyController
             $rememberMe->delete();
         }
 
+        $this->logger->name = 'LOGOUT';
+        $this->logger->info(
+            $this->session->get('me')->id .'::'
+            . $this->session->get('me')->email .'::'
+            . $this->request->getUserAgent() .'::'
+            . $this->request->getClientAddress()
+        );
+
         // remove session
         $this->session->destroy();
 
-        $this->response->redirect('admin/');
+        $this->response->redirect('admin');
     }
 }

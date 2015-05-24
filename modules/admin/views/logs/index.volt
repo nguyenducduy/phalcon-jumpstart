@@ -38,19 +38,19 @@
                                 <th><input type="checkbox" class="check-all"/></th>
                                 <th>
                                     <a href="/admin/logs?orderby=id&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}">
-                                        L id
+                                        ID
                                     </a>
                                 </th>
                                 <th>L name</th>
                                 <th>
                                     <a href="/admin/logs?orderby=type&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}">
-                                        L type
+                                        Type
                                     </a>
                                 </th>
-                                <th>L content</th>
+                                <th>Content</th>
                                 <th>
                                     <a href="/admin/logs?orderby=datecreated&ordertype={% if formData['orderType']|lower == 'desc'%}asc{% else %}desc{% endif %}{% if formData['conditions']['keyword'] != '' %}&keyword={{ formData['conditions']['keyword'] }}{% endif %}">
-                                        L datecreated
+                                        Date Created
                                     </a>
                                 </th>
                                 <th></th>
@@ -77,13 +77,12 @@
                                     <input type="checkbox" name="fbulkid[]" value="{{ logs.id }}" {% if formData['fbulkid'] is defined %}{% for key, value in formData['fbulkid'] if value == logs.id %}checked="checked"{% endfor %}{% endif %} />
                                 </td>
                                 <td>{{ logs.id }}</td>
-                                <td>{{ logs.name }}</td>
+                                <td><code>{{ logs.name }}</code></td>
                                 <td><span class="label label-{{ logs.getTypeLabel() }}">{{ logs.getTypeName() }}</span></td>
                                 <td>{{ logs.content }}</td>
                                 <td>{{ date('Y/m/d h:m', logs.datecreated) }}</td>
                                 <td>
                                     <div class="btn-group btn-group-xs">
-                                        <a href="/admin/logs/edit/id/{{ logs.id }}/redirect/{{ redirectUrl }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
                                         <a href="javascript:deleteConfirm('/admin/logs/delete/id/{{ logs.id }}/redirect/{{ redirectUrl }}', '{{ logs.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </td>

@@ -18,6 +18,8 @@ use Phalcon\Logger\Formatter\Line as PhLoggerFormatter;
 use Phalcon\Mvc\Model\Manager as PhModelsManager;
 use Phalcon\Logger\Adapter\Database as PhLoggerDatabase;
 
+ob_start();
+
 try {
 
     if (!defined('ROOT_PATH')) {
@@ -206,15 +208,14 @@ try {
         $arguments['params'] = $params;
     }
 
-//    // define global constants for the current task and action
-//    define('CURRENT_TASK', (isset($argv[1]) ? $argv[1] : null));
-//    define('CURRENT_ACTION', (isset($argv[2]) ? $argv[2] : null));
+   // define global constants for the current task and action
+   define('CURRENT_TASK', (isset($argv[1]) ? $argv[1] : null));
+   define('CURRENT_ACTION', (isset($argv[2]) ? $argv[2] : null));
 
     // handle incoming arguments
     $console->handle($arguments);
 
 } catch (\Phalcon\Exception $e) {
-
     echo $e->getMessage() . "\n";
     echo $e->getTraceAsString();
     exit(255);
