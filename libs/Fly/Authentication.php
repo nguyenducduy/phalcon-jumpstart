@@ -50,7 +50,7 @@ class Authentication extends \Phalcon\Mvc\User\Component
 
                 // store cookie if chosen
                 if ($cookie == true) {
-                    $this->cookie->set('remember-me', serialize($me), time() + 15 * 86400);
+                    $this->cookie->set('remember-me', $me->id, time() + 15 * 86400);
                 }
 
                 if ($log) {

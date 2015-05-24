@@ -41,6 +41,7 @@ use Fabfuel\Prophiler\Profiler as FaProfiler;
 use Fly\AnnotationsInitializer as FlyAnnotationsInitializer;
 use Fly\AnnotationsMetaDataInitializer as FlyAnnotationsMetaDataInitializer;
 use Fly\Authentication as FlyAuthentication;
+use Fly\Translate\Adapter\Native as FlyTranslate;
 use League\Flysystem\Adapter\Local as FlyLocalAdapter;
 use League\Flysystem\Filesystem as FlySystem;
 
@@ -68,11 +69,11 @@ class Bootstrap
     public function run($options)
     {
         $loaders = [
-            'session',
             'config',
+            'loader',
+            'session',
             'permission',
             'url',
-            'loader',
             'database',
             'logger',
             'environment',
@@ -107,14 +108,14 @@ class Bootstrap
         $modules = $this->getModules();
         $application->registerModules($modules);
 
-        //Detect mobile device
         $eventsManager = new PhEventsManager();
         $application->setEventsManager($eventsManager);
         $eventsManager->attach('application:beforeHandleRequest',function($event, $application) {
-            $di = $application->getDi();
-            $response = $di->get('response');
-            $dispatcher = $di->get('dispatcher');
+            $response = $this->di->get('response');
+            $dispatcher = $this->di->get('dispatcher');
+            $cookie = $this->di->get('cookie');
 
+            //Detect mobile device
             $detect = new \Fly\Mobile_Detect();
             if ($detect->isMobile() && SUBDOMAIN != 'm' && $dispatcher->getModuleName() == 'common') {
                 //begin redirect link to mobile version
@@ -123,6 +124,25 @@ class Bootstrap
 
                 $response->redirect($curPageURL, true);
             }
+
+            //Setting language service
+            $this->di->setShared('lang', function() use ($dispatcher, $cookie) {
+                $language = '';
+
+                // Detect language via cookie
+                if ($cookie->has('language')) {
+                    $language = $cookie->get('language')->getValue();
+                } else {
+                    //Get default language
+                    $language = $this->config->defaultLanguage;
+                }
+
+                return new FlyTranslate([
+                    'module' => strtolower($dispatcher->getModuleName()),
+                    'controller' => $dispatcher->getControllerName(),
+                    'language' => $language
+                ]);
+            });
         });
 
         return $application->handle()->getContent();
@@ -528,6 +548,7 @@ class Bootstrap
 
         $this->di->set('crypt', function () use ($config) {
             $crypt = new PhCrypt();
+            $crypt->setMode(MCRYPT_MODE_CFB);
             $crypt->setKey($config->app_crypt->encryptionkey);
 
             return $crypt;

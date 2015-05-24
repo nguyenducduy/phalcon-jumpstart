@@ -28,7 +28,7 @@ class Breadcrumbs
     {
         $this->_elements[] = array(
             'active' => false,
-            'link'   => $this->di->get('config')->app_baseUri . $link,
+            'link'   => $this->di->get('url')->getBaseUri() . $link,
             'text'   => $caption,
         );
     }

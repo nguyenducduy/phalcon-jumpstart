@@ -21,17 +21,22 @@ class LoginController extends FlyController
     {
         $redirectUrl = $this->dispatcher->getParam('redirect');
         $formData = [];
+        $cookie = false;
         $formData['femail'] = $this->request->getPost('femail', null, '');
         $formData['fpassword'] = $this->request->getPost('fpassword', null, '');
         $formData['fcookie'] = $this->request->getPost('fcookie', null, false);
 
         if ($this->request->hasPost('fsubmit')) {
             if ($this->security->checkToken()) {
+                if (isset($formData['fcookie']) && $formData['fcookie'] == 'remember-me') {
+                    $cookie = (boolean) true;
+                }
+
                 $identity = $this->authentication->check(
                     (string) $formData['femail'],
                     (string) $formData['fpassword'],
-                    $formData['fcookie'],
-                    false);
+                    $cookie,
+                    true);
 
                 if ($identity == true) {
                     if ($redirectUrl != null) {

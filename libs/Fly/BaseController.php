@@ -15,7 +15,6 @@ namespace Fly;
 
 use Phalcon\DI\FactoryDefault as DI;
 use Phalcon\Mvc\View;
-use Fly\Translate\Adapter\Native as FlyTranslate;
 
 class BaseController extends \Phalcon\Mvc\Controller
 {
@@ -34,26 +33,6 @@ class BaseController extends \Phalcon\Mvc\Controller
 
     public function beforeExecuteRoute(\Phalcon\Mvc\Dispatcher $dispatcher)
     {
-        //Registering translation
-        $this->di->setShared('lang', function() {
-            $language = '';
-
-            // Detect language via cookie
-            if ($this->cookie->has('language')) {
-                $this->cookie->useEncryption(false);
-                $language = $this->cookie->get('language')->getValue();
-            } else {
-                //Get default language
-                $language = $this->config->defaultLanguage;
-            }
-
-            return new FlyTranslate([
-                'module' => strtolower($this->router->getModuleName()),
-                'controller' => $this->router->getControllerName(),
-                'language' => $language
-            ]);
-        });
-
         $this->view->setVar('lang', $this->di->get('lang'));
         $this->view->setVar('redirectUrl', base64_encode(urlencode($this->getCurrentUrl())));
     }

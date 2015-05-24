@@ -11,7 +11,7 @@
             {% for tblName in listTables %}
             {% if tblName not in blockTable %}
             <div class="col-xs-6 col-sm-3">
-                <a class="tbl_button" href="{{ config.app_baseUri }}admin/codegenerator/create/table/{{ tblName }}" style="margin-bottom:10px;"><i class="fa fa-magic"></i> &nbsp; {{ tblName }}</a> <br/>
+                <a class="tbl_button" href="{{ url('admin/codegenerator/create/table/' ~ tblName) }}" style="margin-bottom:10px;"><i class="fa fa-magic"></i> &nbsp; {{ tblName }}</a> <br/>
             </div>
             {% endif %}
             {% endfor %}
