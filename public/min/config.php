@@ -34,22 +34,16 @@ $min_errorLogger = false;
  **/
 $min_enableBuilder = false;
 
-
 /**
  * For best performance, specify your temp directory here. Otherwise Minify
  * will have to load extra code to guess. Some examples below:
  */
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
-
-if (USE_APC) {
-    require 'lib/Minify/Cache/APC.php';
-    $min_cachePath = new Minify_Cache_APC();
-} else {
-    $min_cachePath = ROOT_PATH . '/public/minify/';
-    // $min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
-}
-
-
+// require 'lib/Minify/Cache/File.php';
+$min_cachePath = ROOT_PATH . '/../cache/minified/';
+// var_dump($min_cachePath);
+// die;
+// $min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
 
 /**
  * Leave an empty string to use PHP's $_SERVER['DOCUMENT_ROOT'].

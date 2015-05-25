@@ -30,7 +30,7 @@ class DashboardController extends FlyController
         $now = new \DateTime();
         $formData['now'] = $now->format('d/m/Y H:i:s');
 
-        $this->tag->prependTitle('Overview');
+        $this->tag->prependTitle($this->lang->get('IndexTitle'));
         $this->breadcrumb->add('Dashboard', 'admin/dashboard');
         $this->breadcrumb->add('Dashboard', 'admin/dashboard');
         $this->view->setVars([

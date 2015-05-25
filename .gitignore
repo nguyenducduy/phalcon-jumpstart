@@ -1,5 +1,6 @@
 cache/annotations/*
 cache/metadata/*
+cache/minified/*
 cache/volt/*
 logs/apache/*
 logs/app/*
