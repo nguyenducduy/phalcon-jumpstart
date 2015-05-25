@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Summary</label>
-                    <input type="text" name="fsummary" value="{% if formData['fsummary'] is defined %}{{ formData['fsummary'] }}{% endif %}" class="form-control input-sm" />
+                    <textarea type="text" name="fsummary" class="form-control">{% if formData['fsummary'] is defined %}{{ formData['fsummary'] }}{% endif %}</textarea>
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Content</label>

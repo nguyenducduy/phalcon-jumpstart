@@ -32,10 +32,10 @@
 
         <li class="parent"><a href="#"><i class="fa fa-quote-right"></i> <span>Blog</span></a>
             <ul class="children">
-                <li id="postcategory_add"><a href="{{ url('admin/postcategory/add/redirect/' ~ redirectUrl) }}"><i class="fa fa-plus-circle"></i>&nbsp; Category</a></li>
-                <li id="post_add"><a href="{{ url('admin/post/add/redirect/' ~ redirectUrl) }}"><i class="fa fa-plus-circle"></i>&nbsp; Post</a></li>
-                <li id="postcategory_list"><a href="{{ url('admin/postcategory') }}"><i class="fa fa-folder-open"></i>&nbsp;List Category</a></li>
-                <li id="post_list"><a href="{{ url('admin/post') }}"><i class="fa fa-file-o"></i>&nbsp;List Post</a></li>
+                <li id="postcategory_add"><a href="{{ url('admin/postcategory/add/redirect/' ~ redirectUrl) }}"><i class="fa fa-plus-circle"></i>&nbsp; Add new Category</a></li>
+                <li id="post_add"><a href="{{ url('admin/post/add/redirect/' ~ redirectUrl) }}"><i class="fa fa-plus-circle"></i>&nbsp; Add new Post</a></li>
+                <li id="postcategory_list"><a href="{{ url('admin/postcategory') }}"><i class="fa fa-folder-open"></i>&nbsp; Category list</a></li>
+                <li id="post_list"><a href="{{ url('admin/post') }}"><i class="fa fa-file-o"></i>&nbsp; Post list</a></li>
             </ul>
         </li>
     </ul>
