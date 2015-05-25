@@ -2,6 +2,7 @@
 namespace Controller\Admin;
 
 use Fly\BaseController as FlyController;
+use Fly\Helper as Helper;
 
 class PostcategoryController extends FlyController
 {
@@ -116,6 +117,7 @@ class PostcategoryController extends FlyController
                 $myPostcategory = new \Model\PostCategory();
                 $myPostcategory->assign([
                     'name' => $formData['fname'],
+                    'slug' => Helper::slug($formData['fname']),
                     'description' => $formData['fdescription'],
                     'parent' => $formData['fparent'],
                     'status' => $formData['fstatus'],
@@ -142,6 +144,7 @@ class PostcategoryController extends FlyController
             'formData' => $formData,
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\PostCategory::getStatusList(),
+            'categoryList' => \Model\PostCategory::getFullPostcategorys()
         ]);
     }
 
@@ -167,6 +170,7 @@ class PostcategoryController extends FlyController
 
                 $myPostcategory->assign([
                     'name' => $formData['fname'],
+                    'slug' => Helper::slug($formData['fname']),
                     'description' => $formData['fdescription'],
                     'parent' => $formData['fparent'],
                     'status' => $formData['fstatus'],
@@ -193,6 +197,7 @@ class PostcategoryController extends FlyController
             'formData' => $formData,
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\PostCategory::getStatusList(),
+            'categoryList' => \Model\PostCategory::getFullPostcategorys()
         ]);
     }
 

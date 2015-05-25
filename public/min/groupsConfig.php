@@ -21,6 +21,7 @@ return array(
         '../js/admin/custom.js',
         '../js/admin/toastr.min.js',
         '../js/admin/dropzone.js',
+        '../js/admin/bootstrap-markdown-editor.js',
         '../js/admin/main.js',
 	),
     'jsCommon' => array(
@@ -37,6 +38,7 @@ return array(
         '../css/admin/toastr.min.css',
         '../css/admin/dropzone.css',
         '../css/admin/spf.css',
+        '../css/admin/bootstrap-markdown-editor.css',
         '../css/admin/mystyle.css',
 	),
 );

@@ -88,7 +88,7 @@
                                     <input type="checkbox" name="fbulkid[]" value="{{ postcategory.id }}" {% if formData['fbulkid'] is defined %}{% for key, value in formData['fbulkid'] if value == postcategory.id %}checked="checked"{% endfor %}{% endif %} />
                                 </td>
                                 <td>{{ postcategory.id }}</td>
-                                <td>{{ postcategory.name }}</td>
+                                <td>{{ postcategory.name }} <br> <i><code>{{ postcategory.slug }}</code></i></td>
                                 <td>{{ postcategory.parent }}</td>
                                 <td><span class="label label-primary">{{ postcategory.getStatusName()|upper }}</span></td>
                                 <td>{{ postcategory.displayorder }}</td>

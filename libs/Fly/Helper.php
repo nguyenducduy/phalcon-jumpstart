@@ -57,4 +57,20 @@ class Helper
         $currentURL .= $_SERVER["REQUEST_URI"];
         return $currentURL;
     }
+
+    public static function buildTree(array&$elements, $idField, $parentField, $parentId = 0)
+    {
+        $branch = array();
+        foreach ($elements as &$element) {
+            if ($element['parent'] == $parentId) {
+                $children = self::buildTree($elements, $idField, $parentField, $element['id']);
+                if ($children) {
+                    $element['children'] = $children;
+                }
+                $branch[] = $element;
+                unset($element);
+            }
+        }
+        return $branch;
+    }
 }

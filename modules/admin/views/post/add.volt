@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="contentpanel" rel="post_add">
+    {{content()}}
     {{ flash.output() }}
     <div class="row">
         <div class="col-lg-12">
@@ -11,7 +12,7 @@
         </div>
     </div>
 
-    <form method="post" action="" enctype="multipart/form-data">
+    <form method="post" action="" enctype="multipart/form-data" id="addPost">
         <input type="hidden" name="{{ security.getTokenKey() }}" value="{{ security.getToken() }}" />
         <div class="row">
             <div class="col-sm-4 col-md-3">
@@ -21,14 +22,20 @@
                 </p>
             </div>
 
-            <div class="col-sm-4 col-md-4">
+            <div class="col-sm-8 col-md-8">
                 <div class="form-group" >
-                    <label class="control-label">Uid</label>
-                    <input type="text" name="fuid" value="{% if formData['fuid'] is defined %}{{ formData['fuid'] }}{% endif %}" class="form-control input-sm" />
-                </div>
-                <div class="form-group" >
-                    <label class="control-label">Pcid</label>
-                    <input type="text" name="fpcid" value="{% if formData['fpcid'] is defined %}{{ formData['fpcid'] }}{% endif %}" class="form-control input-sm" />
+                    <label class="control-label">Category</label>
+                    <select name="fpcid" class="input-sm">
+                        <option value="0">Root</option>
+                        {% for cat in categoryList %}
+                            <option value="{{ cat['id'] }}" {% if formData['fpcid'] == cat['id'] %}selected="selected"{% endif %}>{{ cat['name'] }}</option>
+                            {% if cat['children'] != null %}
+                                {% for child in cat['children'] %}
+                                <option value="{{ child['id'] }}" {% if formData['fpcid'] == cat['id'] %}selected="selected"{% endif %}>- {{ child['name'] }}</option>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Title</label>
@@ -40,7 +47,8 @@
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Content</label>
-                    <input type="text" name="fcontent" value="{% if formData['fcontent'] is defined %}{{ formData['fcontent'] }}{% endif %}" class="form-control input-sm" />
+                    <div id="myEditor">{{ formData['fcontent'] }}</div>
+                    <input type="hidden" name="fcontent" value="" id="fcontent"/>
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Tags</label>
@@ -82,6 +90,7 @@
         </div>
     </form>
 </div>
+<script type="text/javascript" src="{{ static_url('plugins/ace/ace.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         Dropzone.autoDiscover = false;
@@ -110,6 +119,32 @@
                     toastr.success("File upload OK!");
                 });
             },
+        });
+
+        $('#myEditor').markdownEditor({
+          // Activate the preview:
+          preview: true,
+          // This callback is called when the user click on the preview button:
+          onPreview: function (content, callback) {
+                // Example of implementation with ajax:
+                $.ajax({
+                    url: 'preview.php',
+                    type: 'POST',
+                    dataType: 'html',
+                    data: {content: content},
+                })
+                .done(function(result) {
+                    // Return the html:
+                    callback(result);
+                });
+            },
+            imageUpload: true, // Activate the option
+            uploadPath: root_url + 'admin/post/upload' // Path of the server side script that receive the files
+        });
+
+        $( "#addPost" ).submit(function( event ) {
+            var markdownContent = $('#myEditor').markdownEditor('content');
+            $('#fcontent').val(markdownContent);
         });
     });
 </script>

@@ -91,10 +91,10 @@ class Post extends FlyModel
     public $datemodified;
 
 
-    const STATUS_ENABLE = 1; 
-    const STATUS_DISABLE = 3; 
-    const TYPE_TEXT = 1; 
-    const TYPE_VIDEO = 3; 
+    const STATUS_ENABLE = 1;
+    const STATUS_DISABLE = 3;
+    const TYPE_TEXT = 1;
+    const TYPE_VIDEO = 3;
 
     protected $lang;
 
@@ -117,12 +117,12 @@ class Post extends FlyModel
 
     public function beforeCreate()
     {
-
+        $this->datecreated = time();
     }
 
     public function beforeUpdate()
     {
-
+        $this->datemodified = time();
     }
 
     public function validation()

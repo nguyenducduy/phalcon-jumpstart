@@ -3,6 +3,7 @@ namespace Model;
 
 use Phalcon\DI\FactoryDefault as DI;
 use Fly\BaseModel as FlyModel;
+use Fly\Helper as Helper;
 
 /**
  * PostCategory
@@ -233,5 +234,20 @@ class PostCategory extends FlyModel
         ];
     }
 
+    public static function getFullPostcategorys()
+    {
+        $data = [];
+        $categories = \Model\PostCategory::find();
 
+        foreach ($categories as $myCategory) {
+            $tmp = [];
+            $tmp['id'] = $myCategory->id;
+            $tmp['name'] = $myCategory->name;
+            $tmp['parent'] = $myCategory->parent;
+
+            $data[] = $tmp;
+        }
+
+        return Helper::buildTree($data, 'id', 'parent', 0);
+    }
 }

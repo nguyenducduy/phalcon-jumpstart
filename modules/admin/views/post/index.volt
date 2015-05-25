@@ -88,8 +88,8 @@
                                 <td>{{ post.uid }}</td>
                                 <td>{{ post.pcid }}</td>
                                 <td>{{ post.id }}</td>
-                                <td>{{ post.title }}</td>
-                                <td>{{ post.cover }}</td>
+                                <td>{{ post.title }} <br> <i><code>{{ post.slug }}</code></i></td>
+                                <td><img width="100" height="100" src="{{ post.cover }}" /></td>
                                 <td><span class="label label-primary">{{ post.getStatusName()|upper }}</span></td>
                                 <td><span class="label label-primary">{{ post.getTypeName()|upper }}</span></td>
                                 <td>{{ post.displayorder }}</td>

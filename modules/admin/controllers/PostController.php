@@ -2,6 +2,7 @@
 namespace Controller\Admin;
 
 use Fly\BaseController as FlyController;
+use Fly\Helper as Helper;
 
 class PostController extends FlyController
 {
@@ -119,9 +120,10 @@ class PostController extends FlyController
 
                 $myPost = new \Model\Post();
                 $myPost->assign([
-                    'uid' => $formData['fuid'],
+                    'uid' => $this->session->get('me')->id,
                     'pcid' => $formData['fpcid'],
                     'title' => $formData['ftitle'],
+                    'slug' => Helper::slug($formData['ftitle']),
                     'summary' => $formData['fsummary'],
                     'content' => $formData['fcontent'],
                     'tags' => $formData['ftags'],
@@ -152,6 +154,7 @@ class PostController extends FlyController
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\Post::getStatusList(),
             'typeList' => \Model\Post::getTypeList(),
+            'categoryList' => \Model\PostCategory::getFullPostcategorys()
         ]);
     }
 
@@ -181,7 +184,7 @@ class PostController extends FlyController
                 $formData = array_merge($formData, $this->request->getPost());
 
                 $myPost->assign([
-                    'uid' => $formData['fuid'],
+                    'uid' => $this->session->get('me')->id,
                     'pcid' => $formData['fpcid'],
                     'title' => $formData['ftitle'],
                     'summary' => $formData['fsummary'],
@@ -214,6 +217,7 @@ class PostController extends FlyController
             'breadcrumb' => $this->breadcrumb->generate(),
             'statusList' => \Model\Post::getStatusList(),
             'typeList' => \Model\Post::getTypeList(),
+            'categoryList' => \Model\PostCategory::getFullPostcategorys()
         ]);
     }
 
@@ -249,6 +253,34 @@ class PostController extends FlyController
         $this->view->setVars([
             'jsondata' => $jsondata,
         ]);
+    }
+
+    public function previewAction()
+    {
+        $parsedown = new \Fly\Parsedown();
+        $a = \Model\Post::findFirst();
+
+        echo $parsedown->text($a->content);
+        die;
+    }
+
+    public function uploadAction()
+    {
+        $jsondata = [];
+        $output = [];
+        $success = false;
+        $myPost = new \Model\Post();
+        $upload = $myPost->processUpload();
+        if ($upload == $myPost->isSuccessUpload()) {
+            $jsondata = $myPost->getInfo();
+        }
+
+        foreach ($jsondata as $info) {
+            $output[] = [$this->url->getBaseUri() . $info['path']];
+        }
+        echo json_encode($output);
+
+        exit();
     }
 
 }

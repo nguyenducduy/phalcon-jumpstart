@@ -23,16 +23,26 @@
 
             <div class="col-sm-4 col-md-4">
                 <div class="form-group" >
+                    <label class="control-label">Category</label>
+                    <select name="fparent" class="input-sm">
+                        <option value="0">Root</option>
+                        {% for cat in categoryList %}
+                            <option value="{{ cat['id'] }}" {% if formData['fparent'] == cat['id'] %}selected="selected"{% endif %}>{{ cat['name'] }}</option>
+                            {% if cat['children'] != null %}
+                                {% for child in cat['children'] %}
+                                <option value="{{ child['id'] }}" {% if formData['fparent'] == cat['id'] %}selected="selected"{% endif %}>- {{ child['name'] }}</option>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group" >
                     <label class="control-label">Name</label>
                     <input type="text" name="fname" value="{% if formData['fname'] is defined %}{{ formData['fname'] }}{% endif %}" class="form-control input-sm" />
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Description</label>
                     <input type="text" name="fdescription" value="{% if formData['fdescription'] is defined %}{{ formData['fdescription'] }}{% endif %}" class="form-control input-sm" />
-                </div>
-                <div class="form-group" >
-                    <label class="control-label">Parent</label>
-                    <input type="text" name="fparent" value="{% if formData['fparent'] is defined %}{{ formData['fparent'] }}{% endif %}" class="form-control input-sm" />
                 </div>
                 <div class="form-group" >
                     <label class="control-label">Status</label>
