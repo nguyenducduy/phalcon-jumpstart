@@ -64,7 +64,7 @@
                                 <td>
                                     <div class="btn-group btn-group-xs">
                                         <a href="{{ url('admin/{{CONTROLLER_URL}}/edit/id/' ~ {{CONTROLLER_URL}}.id ~ '/redirect/' ~ redirectUrl) }}" class="btn btn-white"><i class="fa fa-pencil"></i></a>
-                                        <a href="javascript:deleteConfirm('{{ url('admin/{{CONTROLLER_URL}}/delete/id/' ~ {{CONTROLLER_URL}}.id '/redirect/' ~ redirectUrl) }}', '{{ {{CONTROLLER_URL}}.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="javascript:deleteConfirm('{{ url('admin/{{CONTROLLER_URL}}/delete/id/' ~ {{CONTROLLER_URL}}.id ~ '/redirect/' ~ redirectUrl) }}', '{{ {{CONTROLLER_URL}}.id }}');" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </td>
                             </tr>
