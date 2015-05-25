@@ -124,11 +124,12 @@
         $('#myEditor').markdownEditor({
           // Activate the preview:
           preview: true,
+          fullscreen: false,
           // This callback is called when the user click on the preview button:
           onPreview: function (content, callback) {
                 // Example of implementation with ajax:
                 $.ajax({
-                    url: 'preview.php',
+                    url: root_url + 'admin/post/preview',
                     type: 'POST',
                     dataType: 'html',
                     data: {content: content},

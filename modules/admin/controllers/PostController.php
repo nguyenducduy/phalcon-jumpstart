@@ -258,10 +258,9 @@ class PostController extends FlyController
     public function previewAction()
     {
         $parsedown = new \Fly\Parsedown();
-        $a = \Model\Post::findFirst();
-
-        echo $parsedown->text($a->content);
-        die;
+        $content = $this->request->getPost('content', null, '');
+        echo $parsedown->text($content);
+        exit();
     }
 
     public function uploadAction()
