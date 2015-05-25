@@ -43,14 +43,14 @@
                 "description": ""
             },
             {
-                "sql": "[prefix]_name VARCHAR(255) NOT NULL",
+                "sql": "[prefix]_name VARCHAR(255) NULL",
                 "name": "name",
                 "validator": "string",
                 "common": false,
                 "description": ""
             },
             {
-                "sql": "[prefix]_email VARCHAR(100) NOT NULL",
+                "sql": "[prefix]_email VARCHAR(100) NULL",
                 "name": "email",
                 "validator": "string",
                 "common": true,
@@ -64,7 +64,7 @@
                 "description": ""
             },
             {
-                "sql": "[prefix]_role INT(4) NOT NULL",
+                "sql": "[prefix]_role INT(4) NULL",
                 "name": "role",
                 "validator": "int",
                 "common": true,
@@ -78,7 +78,7 @@
                 "description": ""
             },
             {
-                "sql": "[prefix]_status INT(2) NOT NULL",
+                "sql": "[prefix]_status INT(2) NULL",
                 "name": "status",
                 "validator": "int",
                 "common": true,

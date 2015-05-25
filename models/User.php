@@ -21,12 +21,12 @@ class User extends FlyModel
     public $id;
 
     /**
-    * @Column(type="string", nullable=false, column="u_name")
+    * @Column(type="string", nullable=true, column="u_name")
     */
     public $name;
 
     /**
-    * @Column(type="string", nullable=false, column="u_email")
+    * @Column(type="string", nullable=true, column="u_email")
     */
     public $email;
 
