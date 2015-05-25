@@ -143,7 +143,7 @@
             uploadPath: root_url + 'admin/post/upload' // Path of the server side script that receive the files
         });
 
-        $( "#addPost" ).submit(function( event ) {
+        $("#addPost" ).submit(function( event ) {
             var markdownContent = $('#myEditor').markdownEditor('content');
             $('#fcontent').val(markdownContent);
         });

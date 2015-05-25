@@ -96,16 +96,16 @@
     </header><!-- Navbar End -->
 
     <!-- Page Heading -->
-    <div class="page-heading text-right">
+    <!-- <div class="page-heading text-right">
       <div class="container">
-        <form class="search-field form-control">
+        <form class="search-field form-control" method="post" action="{{ url('search') }}">
           <button type="submit" class="search-btn"><i class="flaticon-search100"></i></button>
-          <input type="text" id="search-input">
-          <label for="search-input">Tìm kiếm</label>
+          <input type="text" id="search-input" value="{% if formData['conditions']['keyword'] is defined %}{{ formData['conditions']['keyword'] }}{% endif %}">
+          <label for="search-input">Search</label>
         </form>
         <h2>Blog</h2>
       </div>
-    </div>
+    </div> -->
 
     {% block content %}{% endblock %}
 
@@ -115,6 +115,8 @@
     <script type="text/javascript" src="{{ static_url('js/common/bootstrap.min.js') }}"></script>
     <!-- Javascript (jQuery) Libraries and Plugins -->
     <script type="text/javascript" src="{{ static_url('min/index.php?g=jsCommon&rev=' ~ config.jsVersion) }}"></script>
-
+    <script type="text/javascript">
+      var root_url = "{{ url.getBaseUri() }}";
+    </script>
   </body><!-- Body End-->
 </html>

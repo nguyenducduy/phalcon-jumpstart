@@ -31,8 +31,8 @@ class IndexController extends FlyController
             'title',
         ];
         $page = (int) $this->request->getQuery('page', null, 1);
-        $orderBy = (string) $this->request->getQuery('orderby', null, 'id');
-        $orderType = (string) $this->request->getQuery('ordertype', null, 'asc');
+        $orderBy = (string) $this->request->getQuery('orderby', null, 'datecreated');
+        $orderType = (string) $this->request->getQuery('ordertype', null, 'desc');
         $keyword = (string) $this->request->getQuery('keyword', null, '');
         // optional Filter
         $uid = (int) $this->request->getQuery('uid', null, 0);
@@ -62,7 +62,7 @@ class IndexController extends FlyController
 
         $myPost = \Model\Post::getPostList($formData, $this->recordPerPage, $page);
 
-        $this->tag->prependTitle('Welcome ');
+        $this->tag->prependTitle('Home ');
         $this->view->setVars([
             'formData' => $formData,
             'myPost' => $myPost,
@@ -92,12 +92,25 @@ class IndexController extends FlyController
             $parsedown = new \Fly\Parsedown();
             $myPost->content = $parsedown->text($myPost->content);
         } else {
-
+            //redirect to not found page
         }
+
+        //Get feature post
+        $formData['columns'] = '*';
+        $formData['conditions'] = [
+            'filterBy' => [
+                'pcid' => $myPost->pcid
+            ]
+        ];
+        $formData['orderBy'] = 'datecreated';
+        $formData['orderType'] = 'desc';
+        $myFeaturePost = \Model\Post::getPostList($formData, 5, 1);
 
         $this->tag->prependTitle($myPost->title);
         $this->view->setVars([
-            'myPost' => $myPost
+            'myPost' => $myPost,
+            'categoryList' => \Model\PostCategory::find(),
+            'featurePost' => $myFeaturePost
         ]);
     }
 }

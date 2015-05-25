@@ -2,8 +2,8 @@ cache/annotations/*
 cache/metadata/*
 cache/minified/*
 cache/volt/*
+cache/security/*
 logs/apache/*
 logs/app/*
 logs/mig/*
 public/uploads/*
-public/minify/*

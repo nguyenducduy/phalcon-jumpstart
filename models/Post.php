@@ -338,4 +338,10 @@ class Post extends FlyModel
     {
         return \Model\User::findFirstById($this->uid)->name;
     }
+
+    public function getLabel()
+    {
+        $labels = ['primary', 'success', 'info', 'warning'];
+        return $labels[array_rand($labels)];
+    }
 }

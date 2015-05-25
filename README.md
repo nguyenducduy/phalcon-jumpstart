@@ -1,4 +1,4 @@
-Fly with Phalcon
+Jumpstart with Phalcon Framework
 ================
 
 ## Requirements
@@ -6,7 +6,7 @@ Fly with Phalcon
 - Apache >= 2.0
 - PhalconPHP Framwork >=1.3.4
 - PHP >=5.4 (extension: Pdo, mbstring, openssl)
-- Sphinx Search Engine 2.2.+
+- Sphinx Search Engine 2.2.+ (Optional)
 - [Sphinx Search](http://sphinxsearch.com/)
 - [PhalconPHP](http://phalconphp.com/)
 - libODBC x64 install CentOS: yum install unixODBC unixODBC-devel postgresql-libs (dependencies of SphinxSE)
@@ -15,7 +15,6 @@ Fly with Phalcon
 
 - GD Library (>=2.0)
 - Imagick PHP extension (>=6.5.7)
-- [Intervention](http://image.intervention.io/)
 
 ## Supported Crypt Libraries (using for encrypt cookie)
 
@@ -37,6 +36,8 @@ Fly with Phalcon
 cache/annotations/*
 cache/metadata/*
 cache/volt/*
+cache/security/*
+cache/minified/*
 logs/apache/*
 logs/app/*
 logs/mig/*
@@ -84,11 +85,6 @@ Documentation
 - indexer --config conf/sphinx.conf --all
 - searchd --config conf/sphinx.conf
 - indexer --config conf/sphinx.conf --rotate --all (Re index)
-
-## Runnig Restful API test
-
-- php api_test/client_connect.php newpj.com/api/
-- return "pong" is Success.
 
 ## Running & Query Realtime-Indexs with SphinxQL Builder
 
