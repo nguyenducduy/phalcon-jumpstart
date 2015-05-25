@@ -24,6 +24,6 @@ class IndexController extends FlyController
 
     public function indexAction()
     {
-
+        $this->tag->prependTitle('Welcome ');
     }
 }
