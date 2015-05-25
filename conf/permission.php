@@ -18,6 +18,7 @@ return [
         'Common' => array (
             'index:*',
             'install:*',
+            'post:*',
         ),
     ],
 
@@ -37,6 +38,7 @@ return [
             'index:*',
             'user:*',
             'install:*',
+            'post:*',
         ),
     ],
 

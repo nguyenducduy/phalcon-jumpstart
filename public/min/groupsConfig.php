@@ -25,10 +25,21 @@ return array(
         '../js/admin/main.js',
 	),
     'jsCommon' => array(
-        '../js/common/materialize.min.js',
+        '../js/common/pace.min.js',
+        '../js/common/modernizr.custom.js',
+        '../js/common/detectizr.min.js',
+        '../js/common/jquery.easing.1.3.js',
+        '../js/common/velocity.min.js',
+        '../js/common/smoothscroll.js',
+        '../js/common/waves.min.js',
+        '../js/common/form-plugins.js',
+        '../js/common/jquery.mCustomScrollbar.min.js',
+        '../js/common/isotope.pkgd.min.js',
+        '../js/common/bootstrap-slider.min.js',
+        '../js/common/main.js',
     ),
 	'cssCommon' => array(
-        '',
+        '../css/common/style.css',
     ),
 	'cssAdmin' => array(
         '../css/admin/bootstrap-override.css',
