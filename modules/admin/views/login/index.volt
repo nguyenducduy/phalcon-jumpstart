@@ -25,8 +25,8 @@
                             <img src="{{ static_url('/images/logo-brand.png') }}" alt="Phalcon Jumpstart Logo" width="220">
                         </div>
                         <br />
-                        <h4 class="text-center mb5">Là thành viên?</h4>
-                        <p class="text-center">Đăng nhập vào tài khoản của bạn</p>
+                        <h4 class="text-center mb5">Already a member?</h4>
+                        <p class="text-center">Login with your account</p>
 
                         <div class="mb30"></div>
 
@@ -37,18 +37,18 @@
                             </div><!-- input-group -->
                             <div class="input-group mb15">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input type="password" name="fpassword" class="form-control" placeholder="Mật khẩu" required>
+                                <input type="password" name="fpassword" class="form-control" placeholder="Password" required>
                             </div><!-- input-group -->
 
                             <div class="clearfix">
                                 <div class="pull-left">
                                     <div class="ckbox ckbox-primary mt10">
                                         <input type="checkbox" name="fcookie" id="rememberMe" value="remember-me" {% if formData['fcookie'] == true %}checked{% endif %}>
-                                        <label for="rememberMe" style="display: inline-block">Nhớ mật khẩu</label>
+                                        <label for="rememberMe" style="display: inline-block">Remember me</label>
                                     </div>
                                 </div>
                                 <div class="pull-right">
-                                    <button type="submit" name="fsubmit" class="btn btn-success">Đăng nhập <i class="fa fa-angle-right ml5"></i></button>
+                                    <button type="submit" name="fsubmit" class="btn btn-success">Login <i class="fa fa-angle-right ml5"></i></button>
                                 </div>
                             </div>
                         </form>
