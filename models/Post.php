@@ -329,5 +329,13 @@ class Post extends FlyModel
         ];
     }
 
+    public function getCategoryName()
+    {
+        return \Model\PostCategory::findFirstById($this->pcid)->name;
+    }
 
+    public function getAuthorName()
+    {
+        return \Model\User::findFirstById($this->uid)->name;
+    }
 }

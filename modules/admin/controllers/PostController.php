@@ -123,7 +123,7 @@ class PostController extends FlyController
                     'uid' => $this->session->get('me')->id,
                     'pcid' => $formData['fpcid'],
                     'title' => $formData['ftitle'],
-                    'slug' => Helper::slug($formData['ftitle']),
+                    'slug' => self::getSlug($formData['ftitle']),
                     'summary' => $formData['fsummary'],
                     'content' => $formData['fcontent'],
                     'tags' => $formData['ftags'],
@@ -239,6 +239,15 @@ class PostController extends FlyController
         }
 
         return $this->response->redirect($redirectUrl);
+    }
+
+    public static function getSlug($title)
+    {
+        $year = date('Y', time());
+        $month = date('m', time());
+        $day = date('d', time());
+
+        return $year . '/' . $month . '/' . $day . '/' . Helper::slug($title);
     }
 
     public function uploadcoverAction()

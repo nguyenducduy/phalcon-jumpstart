@@ -141,6 +141,15 @@ $routes = [
             'module'     => 'admin',
             'controller' => 'index',
             'action' => 'logout'
+        ],
+        "/([0-9]{4})/([0-9]{2})/([0-9]{2})/:params" => [
+            "module" => "common",
+            "controller" => "index",
+            "action"     => "detail",
+            "year"       => 1, // ([0-9]{4})
+            "month"      => 2, // ([0-9]{2})
+            "day"        => 3, // ([0-9]{2})
+            "slug"     => 4, // :params
         ]
     ]
 ];

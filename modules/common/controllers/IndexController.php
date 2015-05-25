@@ -17,6 +17,8 @@ use Fly\BaseController as FlyController;
 
 class IndexController extends FlyController
 {
+    protected $recordPerPage = 10;
+
     public function initialize()
     {
         parent::initialize();
@@ -24,6 +26,78 @@ class IndexController extends FlyController
 
     public function indexAction()
     {
+        // Search keyword in specified field model
+        $searchKeywordInData = [
+            'title',
+        ];
+        $page = (int) $this->request->getQuery('page', null, 1);
+        $orderBy = (string) $this->request->getQuery('orderby', null, 'id');
+        $orderType = (string) $this->request->getQuery('ordertype', null, 'asc');
+        $keyword = (string) $this->request->getQuery('keyword', null, '');
+        // optional Filter
+        $uid = (int) $this->request->getQuery('uid', null, 0);
+        $pcid = (int) $this->request->getQuery('pcid', null, 0);
+        $slug = (string) $this->request->getQuery('slug', null, '');
+        $status = (int) $this->request->getQuery('status', null, 0);
+        $type = (int) $this->request->getQuery('type', null, 0);
+        $formData['columns'] = '*';
+        $formData['conditions'] = [
+            'keyword' => $keyword,
+            'searchKeywordIn' => $searchKeywordInData,
+            'filterBy' => [
+                'uid' => $uid,
+                'pcid' => $pcid,
+                'slug' => $slug,
+                'status' => $status,
+                'type' => $type,
+            ]
+        ];
+        $formData['orderBy'] = $orderBy;
+        $formData['orderType'] = $orderType;
+
+        $paginateUrl = $currentUrl . '?orderby=' . $formData['orderBy'] . '&ordertype=' . $formData['orderType'];
+        if ($formData['conditions']['keyword'] != '') {
+            $paginateUrl .= '&keyword=' . $formData['conditions']['keyword'];
+        }
+
+        $myPost = \Model\Post::getPostList($formData, $this->recordPerPage, $page);
+
         $this->tag->prependTitle('Welcome ');
+        $this->view->setVars([
+            'formData' => $formData,
+            'myPost' => $myPost,
+            'recordPerPage' => $this->recordPerPage,
+            'paginator' => $myPost,
+            'paginateUrl' => $paginateUrl
+        ]);
+    }
+
+    public function detailAction()
+    {
+        $year = $this->dispatcher->getParam('year');
+        $month = $this->dispatcher->getParam('month');
+        $day = $this->dispatcher->getParam('day');
+        $slug = $this->dispatcher->getParam('slug');
+        $remixSlug = $year . '/' . $month . '/' . $day . $slug;
+
+        $myPost = \Model\Post::findFirst([
+            'slug = :s: AND status = :status:',
+            'bind' => [
+                's' => $remixSlug,
+                'status' => \Model\Post::STATUS_ENABLE
+            ]
+        ]);
+
+        if ($myPost) {
+            $parsedown = new \Fly\Parsedown();
+            $myPost->content = $parsedown->text($myPost->content);
+        } else {
+
+        }
+
+        $this->tag->prependTitle($myPost->title);
+        $this->view->setVars([
+            'myPost' => $myPost
+        ]);
     }
 }
