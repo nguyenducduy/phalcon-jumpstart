@@ -163,6 +163,24 @@ $settings = [
         ],
         'sanitize' => true,
         'hash' => 'md5'
+    ],
+    'post' => [
+        'directory' => '/public/uploads/post/',
+        'minsize' => 1000,
+        'maxsize' => 1000000,
+        'mimes' => [
+            'image/gif',
+            'image/jpeg',
+            'image/png',
+         ],
+        'extensions' => [
+            'gif',
+            'jpeg',
+            'jpg',
+            'png',
+        ],
+        'sanitize' => true,
+        'hash' => 'md5'
     ]
 ];
 
