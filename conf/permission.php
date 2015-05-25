@@ -30,6 +30,8 @@ return [
             'logs:*',
             'user:*',
             'notfound:*',
+            'postcategory:*',
+            'post:*',
         ),
         'Common' => array (
             'index:*',

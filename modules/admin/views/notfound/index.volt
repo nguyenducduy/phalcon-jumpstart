@@ -8,9 +8,9 @@
 
         {{ get_title() }}
 
-        <link href="{{ config.app_baseUri }}public/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="{{ config.app_baseUri }}public/min/index.php?g=cssAdmin&rev={{ config.cssVersion }}" rel="stylesheet">
-        <script src="{{ config.app_baseUri }}public/min/index.php?g=jquery&rev={{ config.jsVersion }}"></script>
+        <link href="{{ static_url('plugins/bootstrap/bootstrap.min.css"') }} rel="stylesheet" type="text/css">
+        <link href="{{ static_url('min/index.php?g=cssAdmin&rev=' ~ config.cssVersion) }}" rel="stylesheet">
+        <script src="{{ static_url('min/index.php?g=jquery&rev=' ~ config.jsVersion) }}"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
                 </form>
             </div><!-- notfoundpanel -->
         </section>
-        <script type="text/javascript" src="{{ config.app_baseUri }}public/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="{{ config.app_baseUri }}public/min/index.php?g=jsAdmin&rev={{ config.jsVersion }}"></script>
+        <script type="text/javascript" src="{{ static_url('plugins/bootstrap/bootstrap.min.js') }}"></script>
+        <script src="{{ static_url('min/index.php?g=jsAdmin&rev=' ~ config.jsVersion) }}"></script>
     </body>
 </html>
