@@ -5,7 +5,7 @@
     <div class="body padding-top-1x">
       <!-- Copyright -->
       <div class="column copyright">
-        <p>2015 &copy; <a href="#" target="_blank">Phalcon Jumpstart</a>.com</p>
+        <p>2015 &copy; <a href="/">Phalcon Jumpstart</a>.com</p>
       </div>
 
       <!-- <nav class="column footer-nav">

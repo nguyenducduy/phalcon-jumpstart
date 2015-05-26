@@ -31,20 +31,20 @@ class Common
             $eventManager = new PhManager();
 
             //Notfound redirect
-            // $eventManager->attach('dispatch:beforeException', function($event, $dispatcher, $exception) {
-            //     //Alternative way, controller or action doesn't exist
-            //     if ($event->getType() == 'beforeException') {
-            //         switch ($exception->getCode()) {
-            //             case PhDispatcher::EXCEPTION_HANDLER_NOT_FOUND:
-            //             case PhDispatcher::EXCEPTION_ACTION_NOT_FOUND:
-            //                 $dispatcher->forward([
-            //                     'module' => 'common',
-            //                     'controller' => 'notfound'
-            //                 ]);
-            //                 return false;
-            //         }
-            //     }
-            // });
+            $eventManager->attach('dispatch:beforeException', function($event, $dispatcher, $exception) {
+                //Alternative way, controller or action doesn't exist
+                if ($event->getType() == 'beforeException') {
+                    switch ($exception->getCode()) {
+                        case PhDispatcher::EXCEPTION_HANDLER_NOT_FOUND:
+                        case PhDispatcher::EXCEPTION_ACTION_NOT_FOUND:
+                            $dispatcher->forward([
+                                'module' => 'common',
+                                'controller' => 'notfound'
+                            ]);
+                            return false;
+                    }
+                }
+            });
 
             // $eventManager->attach('dispatch', new \Fly\Authorization('common'));
 

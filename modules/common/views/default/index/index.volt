@@ -23,7 +23,7 @@
                 </div>
                 <div class="post-meta">
                   <div class="column">
-                    <span>In </span><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ post.pcid) }}">{{ post.getCategoryName() }}</a>&nbsp;&nbsp;&nbsp;&nbsp;by <a href="#">{{ post.getAuthorName() }}</a>
+                    <span>In </span><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ post.pcid) }}">{{ post.getCategoryName() }}</a>&nbsp;&nbsp;&nbsp;&nbsp;by <a href="javascript:void(0)">{{ post.getAuthorName() }}</a>
                   </div>
                   <div class="column text-right">
                     <span>{{ date('F j, Y', post.datecreated) }}</span>

@@ -68,14 +68,19 @@ class Authorization extends \Phalcon\Mvc\User\Component
         $current_resource = $this->_module . '-' . $dispatcher->getControllerName();
         $current_action = $dispatcher->getActionName();
 
-        if (!is_file(ROOT_PATH . '/cache/security/acl.data')) {
+        $aclKey = 'acl-' . $this->config->app_unique;
+        if (extension_loaded('apc') && ini_get('apc.enabled') && apc_exists($aclKey)) {
+            $this->acl = apc_fetch($aclKey);
+        } else {
             $this->getAcl();
 
-            //Cache acl in file system.
-            $this->filemanager->put('cache/security/acl.data', serialize($this->acl));
-        } else {
-            // Restore acl object from serialized file
-            $this->acl = unserialize($this->filemanager->read('cache/security/acl.data'));
+            // Store in APC
+            if (extension_loaded('apc') && ini_get('apc.enabled')) {
+                if (apc_exists($aclKey)) {
+                    apc_delete($aclKey);
+                }
+                apc_store($aclKey, $this->acl, 0);
+            }
         }
 
         $allowed = $this->acl->isAllowed($role, $current_resource, $current_action);

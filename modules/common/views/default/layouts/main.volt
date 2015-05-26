@@ -1,4 +1,4 @@
-<html>
+<html itemscope itemtype="http://schema.org/Product">
 <head>
     <meta charset="utf-8">
 
@@ -6,12 +6,33 @@
     {{ getTitle() }}
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Responsive HTML5 Theme in Material Design Style" />
-    <meta name="keywords" content="responsive html5 theme, ios, android, material design, landing, application, mobile, blog, portfolio, bootstrap 3, css, jquery, flat, modern" />
-    <meta name="author" content="8Guild" />
+    <meta name="description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process" />
+    <meta name="keywords" content="phalcon, phalconphp, phalcon jumpstart, jumpstart with phalconphp, phalcon developer tool, phalcon code generator" />
+    <meta name="author" content="Nguyễn Đức Duy" />
 
     <!-- Mobile Specific Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Phalcon Jumpstart">
+    <meta itemprop="description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process">
+    <meta itemprop="image" content="http://phalconjumpstart.com/images/phalconjumpstart.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@phalconjumpstart.com">
+    <meta name="twitter:title" content="Phalcon Jumpstart">
+    <meta name="twitter:description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process">
+    <meta name="twitter:creator" content="@nguyenducduyit">
+    <meta name="twitter:image" content="http://phalconjumpstart.com/images/phalconjumpstart.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Phalcon Jumpstart" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://phalconjumpstart.com/" />
+    <meta property="og:image" content="http://phalconjumpstart.com/images/phalconjumpstart.png" />
+    <meta property="og:description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process" />
+    <meta property="og:site_name" content="Phalcon Jumpstart" />
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="{{ static_url('images/favicon.ico') }}" type="image/x-icon">
@@ -46,7 +67,6 @@
                   <li><a href="#">Models</a></li>
                   <li><a href="#">Views</a></li>
                   <li><a href="#">Route</a></li>
-                  <li><a href="#">ACL</a></li>
                 </ul>
                 <ul>
                   <li><a href="#">Multilingual</a></li>
@@ -55,14 +75,12 @@
                   <li><a href="#">DB-Migration</a></li>
                   <li><a href="#">Logger</a></li>
                   <li><a href="#">Code-Generator</a></li>
-                  <li><a href="#">Pushstate</a></li>
-                  <li><a href="#">Data-bindings</a></li>
+                  <li><a href="#">ACL</a></li>
                 </ul>
               </div>
               <ul class="pages">
                 <li><a href="/">Home</a></li>
-                <li class="active"><a href="blog.html">Blog</a></li>
-                <li><a href="blog-single.html">eBooks</a></li>
+                <li class="active"><a href="/">Blog</a></li>
                 <li><a href="{{ url('?type=3&orderby=datecreated&ordertype=desc') }}">Courses</a></li>
                 <li><a href="press.html">Portfolio</a></li>
               </ul>
@@ -79,7 +97,7 @@
         <div class="nav-toggle waves-effect waves-light waves-circle" data-offcanvas="open"><i class="flaticon-menu55"></i></div>
         <!-- Logo -->
         <a href="/" class="logo">
-          <img src="{{ static_url('images/logo.png') }}" alt="PhalconPHP Jumpstart">
+          <img src="{{ static_url('images/logo-brand.png') }}" alt="PhalconPHP Jumpstart">
           PhalconPHP Jumpstart
         </a>
         <!-- Toolbar -->
@@ -87,9 +105,7 @@
           <a href="javascript:void(0)" class="btn btn-flat btn-light icon-left waves-effect waves-light"></a>
           <!-- Social Buttons -->
           <div class="social-buttons text-right">
-            <a href="#" class="sb-twitter"><i class="bi-twitter"></i></a>
-            <a href="#" class="sb-google-plus"><i class="bi-gplus"></i></a>
-            <a href="#" class="sb-facebook"><i class="bi-facebook"></i></a>
+            <iframe src="https://ghbtns.com/github-btn.html?user=nguyenducduy&repo=phalcon-jumpstart&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
           </div>
         </div>
       </div>

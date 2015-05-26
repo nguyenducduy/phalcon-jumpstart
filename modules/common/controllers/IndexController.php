@@ -104,7 +104,7 @@ class IndexController extends FlyController
         ];
         $formData['orderBy'] = 'datecreated';
         $formData['orderType'] = 'desc';
-        $myFeaturePost = \Model\Post::getPostList($formData, 5, 1);
+        $myFeaturePost = \Model\Post::getPostList($formData, 4, 1);
 
         $this->tag->prependTitle($myPost->title);
         $this->view->setVars([

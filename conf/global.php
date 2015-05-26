@@ -5,7 +5,8 @@
  * @var array
  */
 $base = [
-    'app_mobile'      => true,  //Mobile Friendly
+    'app_unique'      => 'pj-de41dc25-d996-4c40-9818-61af1c375629', //using for cache key per website
+    'app_mobile'      => false,  //Mobile Friendly
     'app_version'     => '1.0',
     'app_name'        => 'Jumpstart PhalconPHP',
     'app_baseUri'     => 'newpj.site',

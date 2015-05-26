@@ -39,7 +39,9 @@ $min_enableBuilder = false;
  * will have to load extra code to guess. Some examples below:
  */
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
-$min_cachePath = ROOT_PATH . '/../cache/minified/';
+// $min_cachePath = ROOT_PATH . '/../cache/minified/';
+require 'lib/Minify/Cache/APC.php';
+$min_cachePath = new Minify_Cache_APC();
 
 /**
  * Leave an empty string to use PHP's $_SERVER['DOCUMENT_ROOT'].

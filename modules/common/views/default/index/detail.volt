@@ -38,7 +38,7 @@
                     </div>
                     <div class="post-meta last-child space-bottom">
                         <div class="column">
-                            <span>In </span><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ myPost.pcid) }}">{{ myPost.getCategoryName() }}</a>&nbsp;&nbsp;&nbsp;&nbsp;by <a href="#">{{ myPost.getAuthorName() }}</a>
+                            <span>In </span><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ myPost.pcid) }}">{{ myPost.getCategoryName() }}</a>&nbsp;&nbsp;&nbsp;&nbsp;by <a href="javascript:void(0)">{{ myPost.getAuthorName() }}</a>
                         </div>
                         <!-- <div class="column text-right">
                             <a href="#">#iOS</a> <a href="#">#Apple</a> <a href="#">#Other tags</a>
@@ -46,7 +46,19 @@
                     </div>
                     <div class="inner">
                         <!-- Comments -->
-                        disquus
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES * * */
+                            var disqus_shortname = 'phalconjumpstart';
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                     </div>
                 </div>
                 <!-- Comment Form -->
