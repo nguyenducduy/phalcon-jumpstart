@@ -1,9 +1,8 @@
 <?php
-
 namespace Phalcon\Behavior;
 
 use League\Flysystem\Format as Format;
-use Phalcon\Logger;
+// use Phalcon\Logger;
 use Phalcon\Mvc\Model\Behavior;
 use Phalcon\Mvc\Model\BehaviorInterface;
 use Phalcon\Mvc\Model\Exception;
@@ -99,11 +98,10 @@ class Imageable extends Behavior implements BehaviorInterface
     const ERROR_FILETYPE = 4;
     const ERROR_PERMISSION = 8;
 
-    public function __construct($options)
+    public function __construct($options = null)
     {
-
         $di = \Phalcon\DI\FactoryDefault::getDefault();
-        $this->logger = $di->get('logger');
+        // $this->logger = $di->get('logger');
         $this->filesystem = $di->get('filemanager');
 
         $this->setAllowedFormats($options)
@@ -115,10 +113,8 @@ class Imageable extends Behavior implements BehaviorInterface
              ->setOptions($options);
     }
 
-    public function notify($type, $model)
+    public function notify($type, ModelInterface $model)
     {
-        
-
         if (!is_string($type)) {
             throw new Exception('Invalid parameter type.');
         }
@@ -134,19 +130,18 @@ class Imageable extends Behavior implements BehaviorInterface
 
     public function setOptions($options)
     {
-
         $this->options = $options;
     }
 
     public function getOptions($type)
-    {   
+    {
         if (isset($this->options[$type])) {
             return $this->options[$type];
         }
         return '';
     }
 
-    public function missingMethod($model, $method, $arguments = null)
+    public function missingMethod(ModelInterface $model, $method, $arguments = null)
     {
         if (method_exists($this, $method)) {
             $this->setOwner($model);
@@ -248,7 +243,7 @@ class Imageable extends Behavior implements BehaviorInterface
     }
 
     protected function setOverwrite(array $options)
-    {   
+    {
         if (isset($options['isoverwrite']) && is_array($options['isoverwrite'])) {
             $this->isoverwrite = $options['isoverwrite'];
         }
@@ -351,11 +346,11 @@ class Imageable extends Behavior implements BehaviorInterface
 
             try {
                 $this->filesystem->delete($fullPath);
-                $this->logger->log(Logger::INFO, sprintf('File %s deleted successful.', $fullPath));
+                // $this->logger->log(Logger::INFO, sprintf('File %s deleted successful.', $fullPath));
             } catch(\Exception $e) {
-                $this->logger->log(Logger::ALERT, sprintf(
-                    'An error occurred deleting file %s: %s', $fullPath, $e->getMessage()
-                ));
+                // $this->logger->log(Logger::ALERT, sprintf(
+                //     'An error occurred deleting file %s: %s', $fullPath, $e->getMessage()
+                // ));
             }
         }
     }
@@ -381,7 +376,7 @@ class Imageable extends Behavior implements BehaviorInterface
      * @return bool
      */
     public function checkMaxsize(\Phalcon\Http\Request\File $file, $value)
-    {   
+    {
         $pass = true;
         if ($value !== null && is_numeric($value)) {
             if($file->getSize() > (int)$value) {
