@@ -16,21 +16,21 @@
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Phalcon Jumpstart">
     <meta itemprop="description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process">
-    <meta itemprop="image" content="http://phalconjumpstart.com/images/phalconjumpstart.png">
+    <meta itemprop="image" content="http://phalconjumpstart.com/images/logo-brand.png">
 
     <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@phalconjumpstart.com">
-    <meta name="twitter:title" content="Phalcon Jumpstart">
-    <meta name="twitter:description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process">
     <meta name="twitter:creator" content="@nguyenducduyit">
-    <meta name="twitter:image" content="http://phalconjumpstart.com/images/phalconjumpstart.png">
+    <meta name="twitter:title" content="Phalcon Jumpstart">
+    <meta name="twitter:description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process.">
+    <meta name="twitter:image" content="http://phalconjumpstart.com/images/logo-brand.png">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="Phalcon Jumpstart" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://phalconjumpstart.com/" />
-    <meta property="og:image" content="http://phalconjumpstart.com/images/phalconjumpstart.png" />
+    <meta property="og:image" content="http://phalconjumpstart.com/images/logo-brand.png" />
     <meta property="og:description" content="Powerful Phalcon Developer Tool with CRUD code generator using to speed up project develop process" />
     <meta property="og:site_name" content="Phalcon Jumpstart" />
 
