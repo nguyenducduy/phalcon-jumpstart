@@ -1,4 +1,4 @@
-Fly with Phalcon
+Phalcon Jumpstart
 ================
 
 ## Requirements
