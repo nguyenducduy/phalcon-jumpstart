@@ -9,7 +9,6 @@
 jQuery(document).ready(function($) {
 	'use strict';
 
-
 	// Cashing variables
 	var intro = $('.intro');
 	var content = $('.content-wrap');

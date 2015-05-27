@@ -103,6 +103,7 @@ class Post extends FlyModel
         parent::initialize();
 
         $this->cover = DI::getDefault()->get('config')->post['directory'] . date('Y') . '/' . date('m');
+
         $this->addBehavior(new \Phalcon\Behavior\Imageable([
             'isoverwrite' => false,
             'sanitize' => true,
@@ -179,6 +180,7 @@ class Post extends FlyModel
         $modelName = get_class();
         $whereString = '';
         $bindParams = [];
+        $bindTypeParams = []; //fix2.0
 
         if (is_array($formData['conditions'])) {
             if (isset($formData['conditions']['keyword'])
@@ -208,6 +210,17 @@ class Post extends FlyModel
                     if ($v > 0) {
                         $whereString .= ($whereString != '' ? ' AND ' : '') . $k . ' = :' . $k . ':';
                         $bindParams[$k] = $v;
+
+                        //fix 2.0
+                        switch (gettype($v)) {
+                            case 'string':
+                                $bindTypeParams[$k] =  \PDO::PARAM_STR;
+                                break;
+
+                            default:
+                                $bindTypeParams[$k] = \PDO::PARAM_INT;
+                                break;
+                        }
                     }
                 }
             }
@@ -216,7 +229,8 @@ class Post extends FlyModel
                 $formData['conditions'] = [
                     [
                         $whereString,
-                        $bindParams
+                        $bindParams,
+                        $bindTypeParams //fix2.0
                     ]
                 ];
             } else {

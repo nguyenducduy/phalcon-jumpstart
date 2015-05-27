@@ -108,7 +108,7 @@ class Authorization extends \Phalcon\Mvc\User\Component
         $groupList = array_keys($this->permission);
         foreach ($groupList as $groupConst => $groupValue) {
             // Add Role
-            $this->acl->addRole(new \Phalcon\Acl\Role($groupValue));
+            $this->acl->addRole(new \Phalcon\Acl\Role((string) $groupValue));
 
             if (isset($this->permission[$groupValue]) && is_array($this->permission[$groupValue]) == true) {
                 foreach ($this->permission[$groupValue] as $group => $controller) {
