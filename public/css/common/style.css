@@ -5393,3 +5393,6 @@ a.icon-block {
 		margin-left: 0;
 	}
 }
+.hljs {
+	font-family: Courier;
+}

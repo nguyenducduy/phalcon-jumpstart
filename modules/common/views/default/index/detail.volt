@@ -1,6 +1,7 @@
 {% extends "layouts/main.volt" %}
 
 {% block content %}
+
 <!-- Single Post -->
 <section class="space-top padding-bottom-2x">
     <div class="container">

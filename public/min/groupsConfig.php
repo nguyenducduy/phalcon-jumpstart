@@ -40,6 +40,7 @@ return array(
     ),
 	'cssCommon' => array(
         '../css/common/style.css',
+        '../css/common/tomorrow.css',
     ),
 	'cssAdmin' => array(
         '../css/admin/bootstrap-override.css',

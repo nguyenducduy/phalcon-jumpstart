@@ -129,6 +129,7 @@
 
     <script type="text/javascript" src="{{ static_url('js/common/jquery-2.1.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/common/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/common/highlight.pack.js') }}"></script>
     <!-- Javascript (jQuery) Libraries and Plugins -->
     <script type="text/javascript" src="{{ static_url('min/index.php?g=jsCommon&rev=' ~ config.jsVersion) }}"></script>
     <script type="text/javascript">
