@@ -147,6 +147,7 @@ class User extends FlyModel
         $modelName = get_class();
         $whereString = '';
         $bindParams = [];
+        $bindTypeParams = [];
 
         if (is_array($formData['conditions'])) {
             if (isset($formData['conditions']['keyword'])
@@ -176,6 +177,16 @@ class User extends FlyModel
                     if ($v > 0) {
                         $whereString .= ($whereString != '' ? ' AND ' : '') . $k . ' = :' . $k . ':';
                         $bindParams[$k] = $v;
+
+                        switch (gettype($v)) {
+                            case 'string':
+                                $bindTypeParams[$k] =  \PDO::PARAM_STR;
+                                break;
+
+                            default:
+                                $bindTypeParams[$k] = \PDO::PARAM_INT;
+                                break;
+                        }
                     }
                 }
             }
@@ -184,7 +195,8 @@ class User extends FlyModel
                 $formData['conditions'] = [
                     [
                         $whereString,
-                        $bindParams
+                        $bindParams,
+                        $bindTypeParams
                     ]
                 ];
             } else {
