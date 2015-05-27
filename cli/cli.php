@@ -56,7 +56,6 @@ try {
         'Model' => $config->app_path->models,
         'Phalcon' => $config->app_path->incubator,
         'Foolz' => $config->app_path->sphinxql,
-        'PhpSmug' => $config->app_path->phpsmug,
         'League' => $config->app_path->filemanager
     ]);
     $loader->registerDirs($dirs);

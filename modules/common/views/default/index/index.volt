@@ -1,5 +1,24 @@
 {% extends "layouts/main.volt" %}
 {% block content %}
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Phalcon Jumpstart</h1>
+        <div class="row center">
+            <h5 class="header col s12 light">Fast development web apps with CRUD code generator</h5>
+        </div>
+        <form method="post" action="">
+            <div class="row center">
+                <button type="submit" id="download-button" class="btn-large waves-effect waves-light blue">Install</button>
+            </div>
+            <blockquote>
+                {{ flash.output() }}
+            </blockquote>
+        </form>
+        <br><br>
+    </div>
+</div>
+
 <div class="section">
     <!--   Icon Section   -->
     <div class="row">
