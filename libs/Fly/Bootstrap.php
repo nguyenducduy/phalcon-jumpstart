@@ -88,12 +88,10 @@ class Bootstrap
             'cache',
             'security',
             'crypt',
-            'assets',
             'cookie',
             'beanstalkd',
             'acl',
             'filemanager',
-            'uploader',
             'authentication'
         ];
 
@@ -584,31 +582,6 @@ class Bootstrap
             return new PhAnnotationsAdapter([
                 'annotationsDir' => $config->app_annotations->cache
             ]);
-        });
-    }
-
-    /**
-     * Initializes the assets manager
-     */
-    public function initAssets($options = [])
-    {
-        $config = $this->di->getShared('config');
-
-        $this->di->setShared('assets', function() use ($config) {
-            if (FLAG_DEBUG == false) {
-                $am = new \Fly\Assets\AssetsManager();
-
-                $am->setJsMinifyFolder($config->asset_cache);
-                $am->setCssMinifyFolder($config->asset_cache);
-                // $am->setJsPathPrefix($config->app_domain . $config->asset_cache);
-                // $am->setCssPathPrefix($config->app_domain . $config->asset_cache);
-                $am->addJsFilter(new \Phalcon\Assets\JsMin());
-                $am->addCssFilter(new \Phalcon\Assets\CssMin());
-            } else {
-                $am = new \Phalcon\Assets\Manager();
-            }
-
-            return $am;
         });
     }
 
