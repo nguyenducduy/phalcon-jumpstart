@@ -41,8 +41,7 @@ $path = [
         'exceptionHandler'  => ROOT_PATH . '/libs/Whoops/',
         'incubator'         => ROOT_PATH . '/libs/Phalcon/',
         'sphinxql'          => ROOT_PATH . '/libs/Foolz/',
-        'filemanager'       => ROOT_PATH . '/libs/League/',
-        'uploader'          => ROOT_PATH . '/libs/Uploader',
+        'filemanager'       => ROOT_PATH . '/libs/League/'
     ]
 ];
 
