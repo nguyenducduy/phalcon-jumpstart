@@ -15,8 +15,13 @@
                           <img src="{{ static_url(myPost.cover) }}" class="space-top space-bottom-2x" alt="{{ myPost.title }}">
                         {% endif %}
                         <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-12">
                             {{ myPost.content }}
+                            {% if myPost.type == 3 %}
+                            <div class="embed-responsive embed-responsive-16by9">
+                                {{ myPost.summary }}
+                            </div>
+                            {% endif %}
                             </div>
                             <!-- <div class="col-md-3 padding-top-3x space-top-3x hidden-sm hidden-xs">
                                 <div class="downloadable">
@@ -75,7 +80,7 @@
                             </a>
                             <ul>
                               {% for cat in categoryList %}
-                                <li><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ post.pcid) }}">{{ cat.name }}</a></li>
+                                <li><a href="{{ url('?orderby=datecreated&ordertype=desc&pcid=' ~ cat.id) }}">{{ cat.name }}</a></li>
                               {% endfor %}
                             </ul>
                         </div>
@@ -84,7 +89,7 @@
                         <!-- Featured Posts -->
                         <div class="box-float">
                           {% for fpost in featurePost.items if fpost.id != myPost.id %}
-                            <a href="#" class="featured-post bg-{{ fpost.getLabel() }} waves-effect waves-light">
+                            <a href="{{ url(fpost.slug) }}" class="featured-post bg-{{ fpost.getLabel() }} waves-effect waves-light">
                                 <div class="content">
                                     <div class="arrow"><i class="flaticon-right244"></i></div>
                                     <h3>{{ fpost.title }}</h3>
@@ -93,6 +98,9 @@
                             </a>
                           {% endfor %}
                         </div>
+                        <br>
+                        <a class="twitter-timeline" href="https://twitter.com/nguyenducduyit" data-widget-id="603127636429119488">Tweets by @nguyenducduyit</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                     </div>
                 </div>
             </div>

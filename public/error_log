@@ -1,0 +1,546 @@
+[26-May-2015 13:11:50 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:11:50 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:15:59 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'phalconj_duy'@'localhost' to database 'phalconj_newpj'' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:16:00 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'phalconj_duy'@'localhost' to database 'phalconj_newpj'' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:17:05 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:17:06 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:18:31 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:18:31 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:18:40 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:18:40 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=phal...', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:19:02 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=212....', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:19:03 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_duy'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=212....', 'phalconj_duy', 'Missmilano88', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:21:08 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_newpj'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=212....', 'phalconj_newpj', 'nguyen_ducduy', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:21:08 Asia/Bangkok] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'phalconj_newpj'@'pingu.phalconserver.com' (using password: YES)' in /home/phalconj/public_html/libs/Fly/Bootstrap.php:455
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=212....', 'phalconj_newpj', 'nguyen_ducduy', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/phalconj/public_html/libs/Fly/Bootstrap.php(455): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Fly\Bootstrap->Fly\{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 /home/phalconj/public_html/libs/Fly/Bootstrap.php(406): Phalcon\Di->get('db')
+#6 /home/phalconj/public_html/libs/Fly/Bootstrap.php(101): Fly\Bootstrap->initLogger(Array)
+#7 /home/phalconj/public_html/public/index.php(42): Fly\Bootstrap->run(Array)
+#8 {main}
+  thrown in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 455
+[26-May-2015 13:36:49 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 48
+[26-May-2015 13:36:49 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:49 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:50 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 48
+[26-May-2015 13:36:50 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:50 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:54 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 48
+[26-May-2015 13:36:54 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:54 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:55 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 48
+[26-May-2015 13:36:55 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:36:55 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:37:14 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 100
+[26-May-2015 13:37:14 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:37:14 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:37:16 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting function (T_FUNCTION) in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 100
+[26-May-2015 13:37:16 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:37:16 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:38:47 Asia/Bangkok] PHP Fatal error:  Class 'Phalcon\Behavior\Imageable' not found in /home/phalconj/public_html/models/Post.php on line 107
+[26-May-2015 13:38:47 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:38:47 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:35
+[26-May-2015 13:44:48 Asia/Bangkok] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ')' in /home/phalconj/public_html/models/Post.php on line 185
+[26-May-2015 13:44:48 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:44:48 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:44:48 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:44:48 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:44:48 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:52:33 Asia/Bangkok] PHP Fatal error:  Class 'Phalcon\Behavior\Imageable' not found in /home/phalconj/public_html/models/Post.php on line 107
+[26-May-2015 13:52:33 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:52:33 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:24 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setAllowedFormats() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 107
+[26-May-2015 13:55:24 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:24 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 13:55:25 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setAllowedFormats() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 107
+[26-May-2015 13:55:25 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:25 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 13:55:28 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setAllowedFormats() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 107
+[26-May-2015 13:55:28 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:28 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 13:55:30 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setAllowedFormats() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 107
+[26-May-2015 13:55:30 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:55:30 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 13:56:16 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setOptions() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 113
+[26-May-2015 13:56:16 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:56:16 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 13:56:18 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::setOptions() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 113
+[26-May-2015 13:56:18 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   6. Fly\BaseModel::runPaginate() /home/phalconj/public_html/models/Post.php:235
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   7. Phalcon\Paginator\Adapter\QueryBuilder->getPaginate() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   8. Model\Post->initialize() /home/phalconj/public_html/libs/Fly/BaseModel.php:36
+[26-May-2015 13:56:18 Asia/Bangkok] PHP   9. Phalcon\Behavior\Imageable->__construct() /home/phalconj/public_html/models/Post.php:111
+[26-May-2015 14:00:48 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::processDelete() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 327
+[26-May-2015 14:00:48 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   4. Controller\Admin\UserController->uploadavatarAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   5. Model\User->processUpload() /home/phalconj/public_html/modules/admin/controllers/UserController.php:235
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   6. Phalcon\Behavior\Imageable->missingMethod() /home/phalconj/public_html/modules/admin/controllers/UserController.php:235
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   7. call_user_func_array:{/home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148}() /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148
+[26-May-2015 14:00:48 Asia/Bangkok] PHP   8. Phalcon\Behavior\Imageable->processUpload() /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148
+[26-May-2015 14:05:59 Asia/Bangkok] PHP Fatal error:  Call to undefined method Phalcon\Behavior\Imageable::processDelete() in /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php on line 327
+[26-May-2015 14:05:59 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   4. Controller\Admin\UserController->uploadavatarAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   5. Model\User->processUpload() /home/phalconj/public_html/modules/admin/controllers/UserController.php:235
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   6. Phalcon\Behavior\Imageable->missingMethod() /home/phalconj/public_html/modules/admin/controllers/UserController.php:235
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   7. call_user_func_array:{/home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148}() /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148
+[26-May-2015 14:05:59 Asia/Bangkok] PHP   8. Phalcon\Behavior\Imageable->processUpload() /home/phalconj/public_html/libs/Phalcon/Behavior/Imageable.php:148
+[26-May-2015 14:31:03 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:03 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:03 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:03 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:03 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:06 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:06 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:06 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:06 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:06 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:07 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:07 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:07 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:07 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:07 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:16 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:16 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:16 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:16 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:16 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:17 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:17 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:17 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:17 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:17 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:18 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:18 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:18 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:18 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:18 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:19 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:19 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:19 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:19 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:19 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:20 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:20 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:20 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:20 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:20 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:23 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:23 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:23 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:23 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:23 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:24 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ''/:controller'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/phalconj/public_html/conf/global.php on line 119
+[26-May-2015 14:31:24 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:24 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:24 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:24 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:32 Asia/Bangkok] PHP Catchable fatal error:  Argument 1 passed to Phalcon\Config::__construct() must be of the type array, integer given in /home/phalconj/public_html/libs/Fly/Bootstrap.php on line 162
+[26-May-2015 14:31:32 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:31:32 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:31:32 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:31:32 Asia/Bangkok] PHP   3. Fly\Bootstrap->initLoader() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 14:31:32 Asia/Bangkok] PHP   4. Fly\Bootstrap->Fly\{closure}() /home/phalconj/public_html/libs/Fly/Bootstrap.php:207
+[26-May-2015 14:33:39 Asia/Bangkok] PHP Parse error:  syntax error, unexpected end of file, expecting ']' in /home/phalconj/public_html/conf/global.php on line 160
+[26-May-2015 14:33:39 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 14:33:39 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 14:33:39 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 14:33:39 Asia/Bangkok] PHP   3. Fly\Bootstrap->initConfig() /home/phalconj/public_html/libs/Fly/Bootstrap.php:101
+[26-May-2015 15:01:30 Asia/Bangkok] PHP Fatal error:  Class 'Model\Column' not found in /home/phalconj/public_html/models/Post.php on line 233
+[26-May-2015 15:01:30 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:01:30 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:01:30 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:01:30 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:01:30 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:01:30 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:01:31 Asia/Bangkok] PHP Fatal error:  Class 'Model\Column' not found in /home/phalconj/public_html/models/Post.php on line 233
+[26-May-2015 15:01:31 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:01:31 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:01:31 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:01:31 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:01:31 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:01:31 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:14:24 Asia/Bangkok] PHP Fatal error:  Class 'Model\PDO' not found in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:14:24 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:14:24 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:14:24 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:14:24 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:14:24 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:14:24 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:15:51 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:15:51 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:15:51 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:15:51 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:15:51 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:15:51 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:15:51 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:16:14 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAMS_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:16:14 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:16:14 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:16:14 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:16:14 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:14 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:14 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:16:26 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:16:26 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:16:26 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:16:26 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:16:26 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:26 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:26 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:16:28 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:16:28 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:16:28 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:16:28 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:16:28 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:28 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:16:28 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:17:33 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:17:33 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:17:33 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:17:33 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:17:33 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:17:33 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:17:33 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:18:20 Asia/Bangkok] PHP Fatal error:  Call to undefined function Phalcon\Db\Adapter\Pdo() in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:18:20 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:18:20 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:18:20 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:18:20 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:20 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:20 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:18:22 Asia/Bangkok] PHP Fatal error:  Call to undefined function Phalcon\Db\Adapter\Pdo() in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:18:22 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:18:22 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:18:22 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:18:22 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:22 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:22 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:18:25 Asia/Bangkok] PHP Fatal error:  Call to undefined function Phalcon\Db\Adapter\Pdo() in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:18:25 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:18:25 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:18:25 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:18:25 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:25 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:25 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:18:35 Asia/Bangkok] PHP Fatal error:  Cannot instantiate abstract class Phalcon\Db\Adapter\Pdo in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:18:35 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:18:35 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:18:35 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:18:35 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:35 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:35 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:18:46 Asia/Bangkok] PHP Fatal error:  Cannot instantiate abstract class Phalcon\Db\Adapter\Pdo in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:18:46 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:18:46 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:18:46 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:18:46 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:46 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:18:46 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:19:04 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:19:04 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:19:04 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:19:04 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:19:04 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:04 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:04 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:19:06 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_INT' in /home/phalconj/public_html/models/Post.php on line 221
+[26-May-2015 15:19:06 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:19:06 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:19:06 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:19:06 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:06 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:06 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:19:14 Asia/Bangkok] PHP Parse error:  syntax error, unexpected end of file in /home/phalconj/public_html/models/Post.php on line 186
+[26-May-2015 15:19:14 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:19:14 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:19:14 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:19:14 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:14 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:36 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_STR' in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:19:36 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:19:36 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:19:36 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:19:36 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:36 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:36 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63
+[26-May-2015 15:19:38 Asia/Bangkok] PHP Fatal error:  Undefined class constant 'PARAM_STR' in /home/phalconj/public_html/models/Post.php on line 213
+[26-May-2015 15:19:38 Asia/Bangkok] PHP Stack trace:
+[26-May-2015 15:19:38 Asia/Bangkok] PHP   1. {main}() /home/phalconj/public_html/public/index.php:0
+[26-May-2015 15:19:38 Asia/Bangkok] PHP   2. Fly\Bootstrap->run() /home/phalconj/public_html/public/index.php:42
+[26-May-2015 15:19:38 Asia/Bangkok] PHP   3. Phalcon\Mvc\Application->handle() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:38 Asia/Bangkok] PHP   4. Controller\Common\IndexController->indexAction() /home/phalconj/public_html/libs/Fly/Bootstrap.php:148
+[26-May-2015 15:19:38 Asia/Bangkok] PHP   5. Model\Post::getPostList() /home/phalconj/public_html/modules/common/controllers/IndexController.php:63

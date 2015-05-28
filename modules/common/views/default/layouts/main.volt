@@ -60,29 +60,29 @@
             <nav class="nav-link">
               <div class="scroll-nav">
                 <ul>
-                  <li><a href="#">Install</a></li>
-                  <li><a href="#">HelloWorld</a></li>
-                  <li><a href="#">Directory</a></li>
-                  <li><a href="#">Modules</a></li>
-                  <li><a href="#">Models</a></li>
-                  <li><a href="#">Views</a></li>
-                  <li><a href="#">Route</a></li>
+                  <li><a href="{{ url('2015/05/26/install-phalcon-jumpstart') }}">Install</a></li>
+                  <li><a href="{{ url('2015/05/26/writing-hello-world-app') }}">HelloWorld</a></li>
+                  <li><a href="{{ url('2015/05/26/directory-structure') }}">Directory</a></li>
+                  <li><a href="{{ url('2015/05/26/modules-structure') }}">Modules</a></li>
+                  <li><a href="{{ url('2015/05/26/models-structure') }}">Models</a></li>
+                  <li><a href="{{ url('2015/05/26/views-structure') }}">Views</a></li>
+                  <li><a href="{{ url('2015/05/26/routes') }}">Route</a></li>
                 </ul>
                 <ul>
-                  <li><a href="#">Multilingual</a></li>
-                  <li><a href="#">CSS/JS Minifier</a></li>
-                  <li><a href="#">PHP-CLI</a></li>
-                  <li><a href="#">DB-Migration</a></li>
-                  <li><a href="#">Logger</a></li>
-                  <li><a href="#">Code-Generator</a></li>
-                  <li><a href="#">ACL</a></li>
+                  <li><a href="{{ url('2015/05/26/multi-language-structure') }}">Multilingual</a></li>
+                  <li><a href="{{ url('2015/05/26/css-js-minifier') }}">CSS/JS Minifier</a></li>
+                  <li><a href="{{ url('2015/05/26/php-cli') }}">PHP-CLI</a></li>
+                  <li><a href="{{ url('2015/05/26/db-migration') }}">DB-Migration</a></li>
+                  <li><a href="{{ url('2015/05/26/database-logger') }}">Logger</a></li>
+                  <li><a href="{{ url('2015/05/26/code-generator') }}">Code-Generator</a></li>
+                  <li><a href="{{ url('2015/05/26/permission-acl') }}">ACL</a></li>
                 </ul>
               </div>
               <ul class="pages">
                 <li><a href="/">Home</a></li>
                 <li class="active"><a href="/">Blog</a></li>
                 <li><a href="{{ url('?type=3&orderby=datecreated&ordertype=desc') }}">Courses</a></li>
-                <li><a href="press.html">Portfolio</a></li>
+                <!-- <li><a href="press.html">Portfolio</a></li> -->
               </ul>
             </nav>
           </div>
@@ -97,7 +97,7 @@
         <div class="nav-toggle waves-effect waves-light waves-circle" data-offcanvas="open"><i class="flaticon-menu55"></i></div>
         <!-- Logo -->
         <a href="/" class="logo">
-          <img src="{{ static_url('images/logo-brand.png') }}" alt="PhalconPHP Jumpstart">
+          <img src="{{ static_url('images/logo.png') }}" alt="PhalconPHP Jumpstart">
           PhalconPHP Jumpstart
         </a>
         <!-- Toolbar -->
@@ -124,6 +124,17 @@
     </div> -->
 
     {% block content %}{% endblock %}
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55911554-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
     {% include "layouts/footer.volt" %}
 

@@ -12,14 +12,14 @@
           <div class="item">
             <div class="post-tile">
               {% if post.cover|length > 0 %}
-              <a href="{{ url(post.slug) }}" class="post-thumb waves-effect">
-                <img src="{{ static_url(post.cover) }}" alt="{{ post.title }}">
-              </a>
-              {% endif %}
+                <a href="{{ url(post.slug) }}" class="post-thumb waves-effect">
+                  <img src="{{ static_url(post.cover) }}" alt="{{ post.title }}">
+                </a>
+                {% endif %}
               <div class="post-body">
                 <div class="post-title">
                   <a href="{{ url(post.slug) }}"><h3>{{ post.title }}</h3></a>
-                  <span>{{ post.summary }}</span>
+                  <span>{% if post.type != 3 %}{{ post.summary }}{% endif %}</span>
                 </div>
                 <div class="post-meta">
                   <div class="column">

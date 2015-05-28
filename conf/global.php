@@ -8,7 +8,7 @@ $base = [
     'app_unique'      => 'pj-de41dc25-d996-4c40-9818-61af1c375629', //using for cache key per website
     'app_mobile'      => false,  //Mobile Friendly
     'app_version'     => '1.0',
-    'app_name'        => 'Jumpstart PhalconPHP',
+    'app_name'        => 'Phalcon Jumpstart',
     'app_baseUri'     => 'newpj.site',
     'app_resourceUri' => 'newpj.site',
     'app_db'          => [
@@ -28,8 +28,8 @@ $base = [
         'host' => 'localhost',
         'port' => '11300'
     ],
-    'cssVersion' => 1,
-    'jsVersion' => 1,
+    'cssVersion' => 4,
+    'jsVersion' => 4,
     'defaultTemplate' => 'default',
     'defaultLanguage' => 'en'
 ];
@@ -41,7 +41,6 @@ $path = [
         'views'             => ROOT_PATH . '/modules/common/views/',
         'exceptionHandler'  => ROOT_PATH . '/libs/Whoops/',
         'incubator'         => ROOT_PATH . '/libs/Phalcon/',
-        'sphinxql'          => ROOT_PATH . '/libs/Foolz/',
         'filemanager'       => ROOT_PATH . '/libs/League/',
         'uploader'          => ROOT_PATH . '/libs/Uploader',
     ]
@@ -143,15 +142,15 @@ $routes = [
             'controller' => 'index',
             'action' => 'logout'
         ],
-        "/([0-9]{4})/([0-9]{2})/([0-9]{2})/:params" => [
+        '/([0-9]{4})/([0-9]{2})/([0-9]{2})/:params' => [
             "module" => "common",
-            "controller" => "index",
-            "action"     => "detail",
+            "controller" => "post",
+            "action"     => "show",
             "year"       => 1, // ([0-9]{4})
             "month"      => 2, // ([0-9]{2})
             "day"        => 3, // ([0-9]{2})
-            "slug"     => 4, // :params
-        ]
+            "slug"     => 4,
+        ],
     ]
 ];
 

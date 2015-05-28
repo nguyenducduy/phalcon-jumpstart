@@ -36,6 +36,7 @@ return array(
         '../js/common/jquery.mCustomScrollbar.min.js',
         '../js/common/isotope.pkgd.min.js',
         '../js/common/bootstrap-slider.min.js',
+        '../js/common/fluidvids.min.js',
         '../js/common/main.js',
     ),
 	'cssCommon' => array(

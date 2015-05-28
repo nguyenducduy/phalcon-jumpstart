@@ -20,6 +20,7 @@ class BaseModel extends \Phalcon\Mvc\Model
 {
     public function initialize()
     {
+
     }
 
     public static function runPaginate($params, $limit, $offset)

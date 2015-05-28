@@ -88,29 +88,25 @@ class IndexController extends FlyController
             ]
         ]);
 
-        if ($myPost) {
-            $parsedown = new \Fly\Parsedown();
-            $myPost->content = $parsedown->text($myPost->content);
-        } else {
-            //redirect to not found page
-        }
+        $parsedown = new \Fly\Parsedown();
+        $myPost->content = $parsedown->text($myPost->content);
 
-        //Get feature post
-        $formData['columns'] = '*';
-        $formData['conditions'] = [
-            'filterBy' => [
-                'pcid' => $myPost->pcid
-            ]
-        ];
-        $formData['orderBy'] = 'datecreated';
-        $formData['orderType'] = 'desc';
-        $myFeaturePost = \Model\Post::getPostList($formData, 4, 1);
+        // //Get feature post
+        // $formData['columns'] = '*';
+        // $formData['conditions'] = [
+        //     'filterBy' => [
+        //         'pcid' => $myPost->pcid
+        //     ]
+        // ];
+        // $formData['orderBy'] = 'datecreated';
+        // $formData['orderType'] = 'desc';
+        // $myFeaturePost = \Model\Post::getPostList($formData, 4, 1);
 
         $this->tag->prependTitle($myPost->title);
         $this->view->setVars([
             'myPost' => $myPost,
             'categoryList' => \Model\PostCategory::find(),
-            'featurePost' => $myFeaturePost
+            // 'featurePost' => $myFeaturePost
         ]);
     }
 }

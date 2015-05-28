@@ -69,6 +69,9 @@ class Authentication extends \Phalcon\Mvc\User\Component
                 $this->flash->error('Wrong user information. Try again.');
             }
         } else {
+            // foreach ($myUser->getMessages() as $message) {
+            //     echo $message;
+            // }
             $this->flash->error('Wrong user information. Try again.');
         }
     }

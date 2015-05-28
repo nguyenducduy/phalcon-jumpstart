@@ -37,7 +37,6 @@ use Phalcon\Queue\Beanstalk\Extended as PhExtended;
 use Phalcon\Security as PhSecurity;
 use Phalcon\Session\Adapter\Files as PhSession;
 use Uploader\Uploader as Uploader;
-use Fabfuel\Prophiler\Profiler as FaProfiler;
 use Fly\AnnotationsInitializer as FlyAnnotationsInitializer;
 use Fly\AnnotationsMetaDataInitializer as FlyAnnotationsMetaDataInitializer;
 use Fly\Authentication as FlyAuthentication;
@@ -215,7 +214,6 @@ class Bootstrap
                 'Model' => $config->app_path->models,
                 'Whoops' => $config->app_path->exceptionHandler,
                 'Phalcon' => $config->app_path->incubator,
-                'Foolz' => $config->app_path->sphinxql,
                 'League' => $config->app_path->filemanager,
                 'Uploader' => $config->app_path->uploader
             ]
@@ -722,3 +720,4 @@ class Bootstrap
         return $appModules;
     }
 }
+
