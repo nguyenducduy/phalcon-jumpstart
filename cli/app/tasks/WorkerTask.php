@@ -27,13 +27,13 @@ class WorkerTask extends PhTask
 
     public function mangaAction()
     {
-        $this->bean->addWorker('downloadManga', function (Job $job) {
+        $this->bean->addWorker('exampleTask', function (Job $job) {
             // Here we should collect the meta information, make the screenshots, convert the video to the FLV etc.
             $formData = $job->getBody();
 
             //Write to log
             // $this->loggerDB->name = 'queue';
-            // $this->loggerDB->info('Job:<strong>'. $job->getId() .'</strong>,Tube:<code>'. 'downloadManga' .'</code>,<i>'. $this->message .'</i>');
+            // $this->loggerDB->info('Job:<strong>'. $job->getId() .'</strong>,Tube:<code>'. 'exampleTask' .'</code>,<i>'. $this->message .'</i>');
 
             // It's very important to send the right exit code!
             exit(0);

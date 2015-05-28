@@ -12,6 +12,7 @@ class MainTask extends PhTask
 
     public function testAction()
     {
-
+        echo CURRENT_TASK . PHP_EOL;
+        echo CURRENT_ACTION . PHP_EOL;
     }
 }

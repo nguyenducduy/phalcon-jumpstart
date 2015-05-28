@@ -214,8 +214,7 @@ class Bootstrap
                 'Whoops' => $config->app_path->exceptionHandler,
                 'Phalcon' => $config->app_path->incubator,
                 'Foolz' => $config->app_path->sphinxql,
-                'League' => $config->app_path->filemanager,
-                'Uploader' => $config->app_path->uploader
+                'League' => $config->app_path->filemanager
             ]
         );
 

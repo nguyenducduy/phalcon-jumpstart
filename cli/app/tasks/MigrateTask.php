@@ -1,11 +1,11 @@
 <?php
 
-    use Foolz\Connection;
-    use Foolz\Helper;
-    use Foolz\SphinxQL;
-    use Phalcon\CLI\Task as PhTask;
+use Foolz\Connection;
+use Foolz\Helper;
+use Foolz\SphinxQL;
+use Phalcon\CLI\Task as PhTask;
 
-    class MigrateTask extends PhTask
+class MigrateTask extends PhTask
 {
     private $migrations = null;
 
