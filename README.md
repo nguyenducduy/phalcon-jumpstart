@@ -1,5 +1,8 @@
 Phalcon Jumpstart
 ================
+Fast development web apps with CRUD code generator
+
+[Wiki](https://github.com/nguyenducduy/phalcon-jumpstart/wiki)
 
 ## Requirements
 
