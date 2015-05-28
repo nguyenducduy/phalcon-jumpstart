@@ -39,6 +39,18 @@ return array(
         '../js/common/fluidvids.min.js',
         '../js/common/main.js',
     ),
+    'jsProfile' => array(
+        '../js/profile/css_browser_selector.js',
+        '../js/profile/jquery.easing-1.3.js',
+        '../js/profile/jquery.prettyPhoto.js',
+        '../js/profile/jquery.validate.js',
+        '../js/profile/jquery.address-1.5.min.js',
+        '../js/profile/jquery.isotope.min.js',
+        '../js/profile/jquery.circliful.min.js',
+        '../js/profile/wow.min.js',
+        '../js/profile/jquery.circliful.min.js',
+        '../js/profile/script.js',
+    ),
 	'cssCommon' => array(
         '../css/common/style.css',
         '../css/common/tomorrow.css',
@@ -54,4 +66,9 @@ return array(
         '../css/admin/bootstrap-markdown-editor.css',
         '../css/admin/mystyle.css',
 	),
+    'cssProfile' => array(
+        '../css/profile/prettyPhoto.css',
+        '../css/profile/font-awesome/css/font-awesome.min.css',
+        '../css/profile/stylesheet.css',
+    ),
 );

@@ -101,6 +101,10 @@ $modules = [
         'mobile' => [
             'className' => 'Module\Mobile',
             'path'      => ROOT_PATH . '/modules/mobile/Module.php'
+        ],
+        'profile' => [
+            'className' => 'Module\Profile',
+            'path'      => ROOT_PATH . '/modules/profile/Module.php'
         ]
     ]
 ];
@@ -150,6 +154,11 @@ $routes = [
             "month"      => 2, // ([0-9]{2})
             "day"        => 3, // ([0-9]{2})
             "slug"     => 4,
+        ],
+        '/nguyenducduy' => [
+            'module' => 'profile',
+            'controller' => 'index',
+            'action' => 'index',
         ],
     ]
 ];
