@@ -386,7 +386,7 @@ class Bootstrap
         /**
          * Setup the view service
          */
-        $this->di['view'] = function () use ($config, $di) {
+        $this->di['view'] = function () {
 
             $view = new PhView();
             $view->registerEngines(['.volt' => 'volt']);
@@ -621,9 +621,7 @@ class Bootstrap
      */
     public function initAcl($options = [])
     {
-        $config = $this->di['config'];
-
-        $this->di->setShared('acl', function() use ($config) {
+        $this->di->setShared('acl', function() {
             $acl = new PhAcl();
             $acl->setDefaultAction(\Phalcon\Acl::DENY);
 
