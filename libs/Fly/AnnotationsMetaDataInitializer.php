@@ -148,6 +148,12 @@ class AnnotationsMetaDataInitializer
             //Fields that must be ignored from UPDATE SQL statements
             MetaData::MODELS_AUTOMATIC_DEFAULT_UPDATE => []
 
+            // Default values for columns
+            MetaData::MODELS_DEFAULT_VALUES => [],
+
+            // Fields that allow empty strings
+            MetaData::MODELS_EMPTY_STRING_VALUES => []
+
         ];
 	}
 
