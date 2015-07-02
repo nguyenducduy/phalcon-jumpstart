@@ -70,7 +70,49 @@ class AnnotationsInitializer extends \Phalcon\Mvc\User\Plugin
 							$manager->addBelongsTo($model, $arguments[0], $arguments[1], $arguments[2]);
 						}
 						break;
-
+					/**
+					 * Initializes has-One relations
+					 */	
+					case 'hasOne':
+			                        $arguments = $annotation->getArguments();
+			                        if (isset($arguments[3])) {
+			                            $manager->addHasOne($model, $arguments[0], $arguments[1], $arguments[2], $arguments[3]);
+			                        }
+			                        else {
+			                            $manager->addHasOne($model, $arguments[0], $arguments[1], $arguments[2]);
+			                        }
+			                        break;
+			                /**
+					 * Initializes hasManyToMany relations
+					 */        
+		                        case 'hasManyToMany':
+			                        $arguments = $annotation->getArguments();
+			                        if (isset($arguments[6])) {
+			                            $manager->addHasManyToMany($model, $arguments[0], $arguments[1], $arguments[2], $arguments[3], $arguments[4], $arguments[5], $arguments[6]);
+			                        }
+			                        else {
+			                            $manager->addHasManyToMany($model, $arguments[0], $arguments[1], $arguments[2], $arguments[3], $arguments[4], $arguments[5]);
+			                        }
+			                        break;
+		                         /**
+			                   * Initializes the model's Behavior
+			                   */
+			                 case 'Behavior':
+			                        $arguments = $annotation->getArguments();
+			                        $behaviorName = $arguments[0];
+			                        if (isset($arguments[1])) {
+			                            $manager->addBehavior($model, new $behaviorName($arguments[1]));
+			                        } else {
+			                            $manager->addBehavior($model, new $behaviorName);
+			                        }
+			                        break;
+		                        /**
+	                     		  * Initializes the model's source connection
+			                  */
+			                    case 'setConnectionService':
+			                        $arguments = $annotation->getArguments();
+			                        $manager->setConnectionService($model, $arguments[0]);
+			                        break;
 				}
 			}
 		}
