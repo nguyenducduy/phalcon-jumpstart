@@ -675,20 +675,8 @@ class Bootstrap
     {
         $config = $this->di['config'];
 
-        $modules = $config->app_modules;
+        return $config->app_modules->toArray();
 
-        $appModules = [];
-
-        foreach ($modules as $key => $module) {
-
-            $appModules[$key] = [
-                'className' => $module->className,
-                'path'      => $module->path,
-            ];
-
-        }
-
-        // Register the installed modules
-        return $appModules;
+        
     }
 }
