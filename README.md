@@ -35,7 +35,7 @@ Fast development web apps with CRUD code generator
     - Password: 1
 
 ## .gitignore Settings
-
+```
 cache/annotations/*
 cache/metadata/*
 cache/volt/*
@@ -45,6 +45,7 @@ logs/apache/*
 logs/app/*
 logs/mig/*
 public/uploads/*
+```
 
 Documentation
 ================
