@@ -1,4 +1,4 @@
-Phalcon Jumpstart
+[Deprecated] Phalcon Jumpstart
 ================
 Fast development web apps with CRUD code generator
 
